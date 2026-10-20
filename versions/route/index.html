@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Aaditya Holani, supply chain consultant at OMP in Atlanta.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}</style>
+<title>Aaditya Holani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Layout: a sticky left column holds the name and the career drawn as a supply route (map and navigation at once);
+     the right column scrolls through the record, latest stop first. */
+  :root {
+    --bg: #f3f4f1;
+    --surface: #e8eae5;
+    --ink: #17201c;
+    --muted: #535d57;
+    --line: #c9cfc7;
+    --accent: #c47414;
+    --accent-ink: #8f520a;
+
+    --display: "IBM Plex Sans Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+    --text: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+
+    --s-small: 0.875rem;
+    --s-body: 1.0625rem;
+    --s-lead: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+    --s-head: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem);
+    --s-name: clamp(3.25rem, 2rem + 4.6vw, 6rem);
+
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111614; --surface: #1a201d; --ink: #e6e9e4; --muted: #98a19b; --line: #2d3531;
+      --accent: #e39a42; --accent-ink: #f0b266; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111614; --surface: #1a201d; --ink: #e6e9e4; --muted: #98a19b; --line: #2d3531;
+    --accent: #e39a42; --accent-ink: #f0b266; color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 var(--s-body)/1.6 var(--text);
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    accent-color: var(--accent); caret-color: var(--accent);
+    scrollbar-color: var(--line) var(--bg);
+  }
+  ::selection { background: var(--accent); color: var(--bg); }
+  h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; line-height: 1.05; text-wrap: balance; }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  .page {
+    max-width: 1240px; margin: 0 auto;
+    padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px));
+    display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 112px);
+  }
+
+  /* Left column */
+  .intro { position: sticky; top: 0; height: 100vh; height: 100svh; padding-block: max(64px, env(safe-area-inset-top, 0px)) 48px; display: flex; flex-direction: column; gap: 40px; }
+  .intro h1 { font-size: var(--s-name); font-weight: 700; line-height: 0.92; letter-spacing: -0.02em; }
+  .intro h1 span { display: block; }
+  .role-line { font-family: var(--display); font-size: var(--s-lead); font-weight: 500; line-height: 1.25; margin-top: 16px; }
+  .role-line a { color: var(--accent-ink); }
+  .pitch { color: var(--muted); max-width: 34ch; margin-top: 16px; }
+
+  /* The route: career stops as nodes on a line; the drawn part follows the scroll */
+  .route { position: relative; flex: 1; min-height: 0; display: flex; }
+  .route ol { list-style: none; padding: 0; margin: 0; position: relative; display: flex; flex-direction: column; justify-content: space-between; max-height: 380px; width: 100%; }
+  .route__track, .route__fill { position: absolute; left: 6px; top: 0; height: 0; width: 2px; background: var(--line); }
+  .route__fill { background: var(--accent); transform-origin: 50% 0; transform: scaleY(var(--p, 0)); }
+  .stop a { position: relative; display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; align-items: center; gap: 16px; padding-block: 4px; color: var(--muted); transition: color 180ms ease; }
+  .stop .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--bg); box-shadow: inset 0 0 0 2px var(--line); transition: background-color 240ms ease, box-shadow 240ms ease, transform 240ms var(--ease-out); }
+  .stop .org { font-family: var(--display); font-weight: 600; font-size: 1.0625rem; }
+  .stop .yr { font-size: var(--s-small); font-variant-numeric: tabular-nums; }
+  .stop.is-passed .dot { box-shadow: inset 0 0 0 2px var(--accent); }
+  .stop.is-here a { color: var(--ink); }
+  .stop.is-here .dot { background: var(--accent); box-shadow: inset 0 0 0 2px var(--accent); transform: scale(1.15); }
+  @media (hover: hover) and (pointer: fine) { .stop a:hover { color: var(--ink); } }
+
+  .links { display: flex; gap: 8px 24px; flex-wrap: wrap; font-weight: 500; }
+  .links a { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; transition: color 180ms ease; }
+  .links svg { width: 18px; height: 18px; }
+  @media (hover: hover) and (pointer: fine) { .links a:hover { color: var(--accent-ink); } }
+
+  /* Right column */
+  main { padding-block: max(64px, env(safe-area-inset-top, 0px)) 96px; display: grid; gap: clamp(88px, 10vw, 144px); min-width: 0; }
+  section { scroll-margin-top: 48px; }
+  .sec-h { font-size: var(--s-head); margin-bottom: 28px; }
+  .about p { max-width: 60ch; }
+  .about p + p { margin-top: 16px; }
+  .about strong { font-weight: 600; }
+
+  .figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
+  .figure { display: grid; gap: 6px; align-content: start; }
+  .figure .n { font-family: var(--display); font-size: clamp(3rem, 2.2rem + 3vw, 4.75rem); font-weight: 700; line-height: 0.9; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .figure p { max-width: 30ch; }
+  .figure .src { color: var(--muted); font-size: var(--s-small); font-weight: 500; }
+
+  /* Stops on the record */
+  .record { list-style: none; padding: 0; display: grid; gap: 56px; }
+  .entry { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 8px 32px; scroll-margin-top: 48px; transition: opacity 240ms ease; }
+  .entry .when { color: var(--muted); font-size: var(--s-small); font-weight: 500; font-variant-numeric: tabular-nums; padding-top: 4px; }
+  .entry h3 { font-size: 1.5rem; }
+  .entry .org { display: block; margin-top: 4px; font-family: var(--text); font-size: var(--s-body); font-weight: 500; color: var(--accent-ink); letter-spacing: 0; }
+  .entry .place { color: var(--muted); font-size: var(--s-small); margin-top: 2px; }
+  .entry ul { list-style: none; padding: 0; margin-top: 16px; display: grid; gap: 10px; max-width: 62ch; }
+  .entry li { position: relative; padding-left: 20px; }
+  .entry li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 8px; height: 2px; background: var(--accent); }
+  .entry strong { font-weight: 600; }
+  .entry .tools { margin-top: 14px; color: var(--muted); font-size: var(--s-small); }
+  .entry .project { margin-top: 16px; padding: 16px 18px; background: var(--surface); border-radius: 6px; }
+  .entry .project b { font-weight: 600; display: block; }
+  .entry .project span { color: var(--muted); font-size: var(--s-small); }
+  @media (hover: hover) and (pointer: fine) {
+    .record:has(.entry:hover) .entry:not(:hover) { opacity: 0.5; }
+  }
+
+  .kit dl { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 12px 24px; }
+  .kit dt { font-weight: 600; }
+
+  .contact p { max-width: 46ch; color: var(--muted); }
+  .contact .email-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 24px; }
+  .contact .email { font-family: var(--display); font-size: var(--s-head); font-weight: 600; user-select: all; overflow-wrap: anywhere; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px;
+    border: 0; border-radius: 6px; background: var(--ink); color: var(--bg); cursor: pointer;
+    font: 500 var(--s-body)/1 var(--text);
+    transition: transform 160ms var(--ease-out), background-color 180ms ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active { transform: scale(0.97); }
+  @media (hover: hover) and (pointer: fine) { .btn:hover { background: var(--accent-ink); } }
+  .btn .morph { display: inline-grid; }
+  .btn .morph > span { grid-area: 1 / 1; transition: opacity 200ms ease, filter 200ms ease, transform 200ms var(--ease-out); }
+  .btn .morph > span[aria-hidden="true"] { opacity: 0; filter: blur(2px); transform: scale(0.96); }
+  footer { color: var(--muted); font-size: var(--s-small); }
+
+  /* Phone: one column; the route becomes a timeline line beside the record */
+  @media (max-width: 900px) {
+    .page { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .intro { position: static; height: auto; padding-bottom: 0; gap: 28px; }
+    .route { display: none; }
+    main { padding-top: 64px; }
+    .record { padding-left: 24px; border-left: 2px solid var(--line); gap: 44px; }
+    .entry { grid-template-columns: minmax(0, 1fr); position: relative; }
+    .entry::before { content: ""; position: absolute; left: -32px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); box-shadow: inset 0 0 0 2px var(--accent); }
+    .entry:first-child::before { background: var(--accent); }
+    .entry .when { padding-top: 0; }
+  }
+  @media (max-width: 520px) {
+    .figures { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    .kit dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+    .kit dd { margin-bottom: 12px; }
+  }
+
+  /* One orchestrated moment: the name rises into place on load */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .intro h1 span { animation: rise 900ms var(--ease-out) both; }
+    .js .intro h1 span + span { animation-delay: 90ms; }
+    .js .intro .role-line, .js .intro .pitch { animation: fade 700ms ease both 260ms; }
+    .js .route { animation: fade 900ms ease both 420ms; }
+  }
+  @keyframes rise { from { opacity: 0.001; transform: translateY(0.35em); filter: blur(6px); } }
+  @keyframes fade { from { opacity: 0.001; } }
+  @media (prefers-reduced-motion: reduce) {
+    .route__fill, .stop .dot { transition: none; }
+  }
+</style>
+
+</head>
+<body>
+<div class="page">
+  <header class="intro">
+    <div>
+      <h1><span>Aaditya</span><span>Holani</span></h1>
+      <p class="role-line">Supply chain consultant at <a href="#omp">OMP</a></p>
+      <p class="pitch">I plan supply chains and the systems behind them, and I measure the work in stock, days and dollars.</p>
+    </div>
+
+    <nav class="route" aria-label="Career route">
+      <span class="route__track" id="route-track" aria-hidden="true"></span>
+      <span class="route__fill" id="route-fill" aria-hidden="true"></span>
+      <ol id="route">
+        <li class="stop" data-for="omp"><a href="#omp"><span class="dot"></span><span class="org">OMP, Atlanta</span><span class="yr">2024</span></a></li>
+        <li class="stop" data-for="tamu"><a href="#tamu"><span class="dot"></span><span class="org">Texas A&amp;M</span><span class="yr">2024</span></a></li>
+        <li class="stop" data-for="formlabs"><a href="#formlabs"><span class="dot"></span><span class="org">Formlabs</span><span class="yr">2023</span></a></li>
+        <li class="stop" data-for="deloitte"><a href="#deloitte"><span class="dot"></span><span class="org">Deloitte</span><span class="yr">2021</span></a></li>
+        <li class="stop" data-for="vnit"><a href="#vnit"><span class="dot"></span><span class="org">VNIT, Nagpur</span><span class="yr">2021</span></a></li>
+        <li class="stop" data-for="schindler"><a href="#schindler"><span class="dot"></span><span class="org">Schindler</span><span class="yr">2020</span></a></li>
+      </ol>
+    </nav>
+
+    <div class="links">
+      <a href="https://www.linkedin.com/in/aadityaholani"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11z"/></svg>LinkedIn</a>
+      <a href="https://github.com/AadityaHolani"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>GitHub</a>
+      <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about" id="about" aria-labelledby="about-h">
+      <h2 class="sec-h" id="about-h">About</h2>
+      <p>I'm a supply chain consultant at <strong>OMP</strong> in Atlanta, where I help deliver sales and operations planning for <strong>Mars Petcare</strong>, from gathering requirements to go-live support.</p>
+      <p>Before that I ran the replacement parts program at <strong>Formlabs</strong>, rolled out Salesforce CPQ and DocuSign CLM for clients at <strong>Deloitte</strong>, and earned an MS in Industrial Engineering at <strong>Texas A&amp;M</strong> with a 4.0 GPA and the Academic Excellence Medal.</p>
+    </section>
+
+    <section id="impact" aria-labelledby="impact-h">
+      <h2 class="sec-h" id="impact-h">Recent impact</h2>
+      <div class="figures">
+        <div class="figure"><span class="n">25%</span><p>higher user adoption after prioritising 15 high-impact features.</p><span class="src">OMP, 2024 to now</span></div>
+        <div class="figure"><span class="n">20%</span><p>faster time to market for those features.</p><span class="src">OMP, 2024 to now</span></div>
+        <div class="figure"><span class="n">99%</span><p>fill rate on replacement parts, with $240k of excess stock avoided.</p><span class="src">Formlabs, 2023 to 2024</span></div>
+        <div class="figure"><span class="n">$300k</span><p>saved by bringing 13 new service parts in on time.</p><span class="src">Formlabs, 2023 to 2024</span></div>
+      </div>
+    </section>
+
+    <section id="record" aria-labelledby="record-h">
+      <h2 class="sec-h" id="record-h">Experience and education</h2>
+      <ol class="record">
+        <li class="entry" id="omp">
+          <span class="when">Sep 2024 to now</span>
+          <div>
+            <h3>Supply Chain Consultant <span class="org">OMP</span></h3>
+            <p class="place">Atlanta, Georgia</p>
+            <ul>
+              <li>Drove a sales and operations planning solution for Mars Petcare from requirements to delivery, enabling scenario planning over a <strong>2-year</strong> horizon.</li>
+              <li>Turned requirements from cross-functional stakeholders into <strong>45+</strong> user stories for agile delivery.</li>
+              <li>Prioritised <strong>15</strong> high-impact features by customer value and feasibility: <strong>20%</strong> faster time to market and <strong>25%</strong> higher user adoption.</li>
+              <li>Wrote UAT test scripts and resolved defects, making the solution <strong>20%</strong> more reliable after handover.</li>
+              <li>Ran <strong>8</strong> client demos and on-site sessions, speeding onboarding by <strong>30%</strong> across multi-region supply chains.</li>
+            </ul>
+            <p class="tools">OMP, S&amp;OP, Agile, Jira, UAT</p>
+          </div>
+        </li>
+        <li class="entry" id="tamu">
+          <span class="when">Aug 2024</span>
+          <div>
+            <h3>MS Industrial Engineering <span class="org">Texas A&amp;M University</span></h3>
+            <p class="place">College Station, Texas</p>
+            <ul>
+              <li>GPA <strong>4.0</strong> and the <strong>Academic Excellence Medal</strong>.</li>
+            </ul>
+            <div class="project">
+              <b>Predicting mask-wearing frequency during COVID-19</b>
+              <span>Academic project, Mar to May 2023. Trained statistical models and reached high predictive accuracy with lasso regression.</span>
+            </div>
+          </div>
+        </li>
+        <li class="entry" id="formlabs">
+          <span class="when">May 2023 to Apr 2024</span>
+          <div>
+            <h3>Supply Chain Program Manager <span class="org">Formlabs</span></h3>
+            <p class="place">USA</p>
+            <ul>
+              <li>Built Looker Studio KPI dashboards for the replacement parts program: <strong>18%</strong> more effective, <strong>25%</strong> higher customer satisfaction.</li>
+              <li>Saved <strong>$300k</strong> by bringing <strong>13</strong> new service parts in on time with suppliers, service engineering and design.</li>
+              <li>Owned replacement parts inventory with SQL-backed SKU and product line dashboards: <strong>99%</strong> fill rate, <strong>$240k</strong> of excess stock avoided.</li>
+              <li>Delivered <strong>$200k</strong> in cost-downs on high-performing SKUs by negotiating multi-vendor quotes against logistics and duty costs.</li>
+              <li>Automated planning sheets with scheduled Python, saving <strong>4 hours</strong> of data entry a week.</li>
+            </ul>
+            <p class="tools">Looker Studio, SQL, Python, NetSuite</p>
+          </div>
+        </li>
+        <li class="entry" id="deloitte">
+          <span class="when">Jul 2021 to Jul 2022</span>
+          <div>
+            <h3>Product Analyst <span class="org">Deloitte Consulting</span></h3>
+            <p class="place">India</p>
+            <ul>
+              <li>Saved <strong>$2.5M</strong> a year by cutting contract cycle time from 40 days to 5 with DocuSign CLM.</li>
+              <li>Implemented Salesforce CPQ: automated quotes, <strong>30%</strong> fewer costly order errors and <strong>25%</strong> more cross-selling.</li>
+              <li>Supported design, development, QA and UAT with data analysis for a defect-free implementation, saving <strong>15%</strong> in man-hours.</li>
+              <li>Prioritised user stories with the scrum master across <strong>5</strong> sprints and cleared <strong>8</strong> blockers to keep delivery on time.</li>
+            </ul>
+            <p class="tools">Salesforce CPQ, DocuSign CLM, Scrum</p>
+          </div>
+        </li>
+        <li class="entry" id="vnit">
+          <span class="when">May 2021</span>
+          <div>
+            <h3>BTech Mechanical Engineering <span class="org">Visvesvaraya National Institute of Technology</span></h3>
+            <p class="place">Nagpur, India</p>
+            <ul>
+              <li>GPA <strong>8.31</strong> out of 10.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="entry" id="schindler">
+          <span class="when">Jun to Jul 2020</span>
+          <div>
+            <h3>Data Analyst Intern <span class="org">Schindler India</span></h3>
+            <p class="place">India</p>
+            <ul>
+              <li>Drove <strong>$50k</strong> in revenue and <strong>25%</strong> more contract renewals in a month by spotting early signs of cancellation.</li>
+              <li>Reduced lead attrition by <strong>15%</strong> by consolidating customer feedback and reporting why leads were lost.</li>
+              <li>Built interactive dashboards mapping service satisfaction across <strong>3</strong> regions.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="kit" id="toolkit" aria-labelledby="kit-h">
+      <h2 class="sec-h" id="kit-h">Toolkit</h2>
+      <dl>
+        <dt>Data analysis</dt><dd>Python (pandas, NumPy, scikit-learn), SQL, R, Minitab, advanced Excel</dd>
+        <dt>Platforms</dt><dd>OMP, NetSuite, BigQuery, Salesforce, Netstock, Coupa, SAP</dd>
+        <dt>Product and projects</dt><dd>Asana, Jira, Agile, Scrum</dd>
+        <dt>Technical</dt><dd>Optimization, problem solving, SaaS, business analysis, supply chain management</dd>
+        <dt>Working style</dt><dd>Leadership, cross-team collaboration, accountability, communication, consulting</dd>
+      </dl>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <h2 class="sec-h" id="contact-h">Get in touch</h2>
+      <p>Open to supply chain planning, S&amp;OP and operations consulting roles. Email is the quickest way to reach me.</p>
+      <div class="email-row">
+        <span class="email" id="email">aaditya.holani@gmail.com</span>
+        <button class="btn" id="copy" type="button"><span class="morph"><span id="copy-a">Copy email</span><span id="copy-b" aria-hidden="true">Copied</span></span></button>
+      </div>
+    </section>
+
+    <footer>© 2026 Aaditya Holani · Atlanta, Georgia</footer>
+  </main>
+</div>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  // The route: light each stop as its entry reaches the reading line, and draw the line down to it
+  const stops = [...document.querySelectorAll('.stop')];
+  const entries = stops.map((s) => document.getElementById(s.dataset.for));
+  const fill = document.getElementById('route-fill'), track = document.getElementById('route-track'), routeBox = document.querySelector('.route');
+  const dots = stops.map((s) => s.querySelector('.dot'));
+  let ticking = false;
+  function update() {
+    ticking = false;
+    const line = innerHeight * 0.4;
+    let here = -1;
+    entries.forEach((e, i) => { if (e.getBoundingClientRect().top <= line) here = i; });
+    // Before the record starts, the route rests at its first stop
+    stops.forEach((s, i) => {
+      s.classList.toggle('is-here', i === Math.max(0, here));
+      s.classList.toggle('is-passed', i < here);
+      s.querySelector('a').toggleAttribute('aria-current', i === Math.max(0, here));
+    });
+    // Fill grows between the stops in proportion to how far the reader is through the current entry
+    let p = 0;
+    const y = dots.map((d) => { const r = d.getBoundingClientRect(); return r.top + r.height / 2 - routeBox.getBoundingClientRect().top; });
+    const top = y[0], span = y[y.length - 1] - top || 1;
+    track.style.top = fill.style.top = top + 'px';
+    track.style.height = fill.style.height = span + 'px';
+    if (here >= 0) {
+      const cur = y[here] - top;
+      const next = here < y.length - 1 ? y[here + 1] - top : cur;
+      const r = entries[here].getBoundingClientRect();
+      const t = Math.min(1, Math.max(0, (line - r.top) / Math.max(1, r.height)));
+      p = (cur + (next - cur) * t) / span;
+    }
+    fill.style.setProperty('--p', p.toFixed(4));
+  }
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
+
+  // Copy email, falling back to selecting it
+  const copy = document.getElementById('copy'), a = document.getElementById('copy-a'), b = document.getElementById('copy-b'), email = document.getElementById('email');
+  let t;
+  const show = (on) => { a.setAttribute('aria-hidden', String(on)); b.setAttribute('aria-hidden', String(!on)); };
+  const select = () => { const r = document.createRange(); r.selectNodeContents(email); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  copy.addEventListener('click', () => {
+    try {
+      navigator.clipboard.writeText(email.textContent.trim()).then(() => { show(true); clearTimeout(t); t = setTimeout(() => show(false), 1600); }, select);
+    } catch (_) { select(); }
+  });
+</script>
+
+</body>
+</html>
