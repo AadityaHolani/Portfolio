@@ -7,7 +7,7 @@
 <meta property="og:title" content="Aaditya Holani, Supply Chain">
 <meta property="og:description" content="Supply chain consultant at OMP. 25% higher user adoption, 99% fill rate, $2.5M saved a year.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="img/box.jpg">
+<meta property="og:image" content="img/box.webp">
 <meta name="theme-color" content="#45598d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2345598d'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='30' fill='%23f3f5fa'%3EAH%3C/text%3E%3C/svg%3E">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}</style>
@@ -43,11 +43,12 @@
   }
   * { box-sizing: border-box; }
   html { background: var(--bg); }
+  .sky { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, var(--g1, var(--bg)) 0%, var(--g2, var(--bg)) 100%); }
   body {
-    margin: 0; background: var(--bg); color: var(--ink);
+    margin: 0; background: transparent; color: var(--ink);
     font: 400 var(--s-body)/1.55 var(--text);
     -webkit-font-smoothing: antialiased;
-    transition: background-color 800ms var(--ease-in-out), color 800ms var(--ease-in-out);
+    transition: color 800ms var(--ease-in-out);
     overflow-x: hidden;
   }
   ::selection { background: var(--ink); color: var(--bg); }
@@ -57,7 +58,7 @@
   .wrap { padding-left: max(var(--margin), env(safe-area-inset-left, 0px)); padding-right: max(var(--margin), env(safe-area-inset-right, 0px)); }
 
   /* Header */
-  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); transition: background-color 800ms var(--ease-in-out); }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--g1, var(--bg)); }
   .top {
     position: fixed; z-index: 10; left: 0; right: 0; top: env(safe-area-inset-top, 0px);
     display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 18px;
@@ -85,7 +86,9 @@
     position: absolute; z-index: 1; left: 50%; top: 50%; width: min(46vw, 560px); aspect-ratio: 1;
     translate: -50% -46%; pointer-events: none;
   }
-  .hero__obj img, .obj img { width: 100%; height: 100%; object-fit: cover; display: block;
+  .hero__obj img.cut, .obj img.cut { width: 100%; height: 100%; object-fit: contain; display: block; -webkit-mask-image: none; mask-image: none;
+    filter: saturate(0.55) brightness(0.95) drop-shadow(0 28px 34px rgba(12, 14, 20, 0.22)); }
+  .hero__obj img:not(.cut), .obj img:not(.cut) { width: 100%; height: 100%; object-fit: cover; display: block;
     -webkit-mask-image: radial-gradient(closest-side, #000 46%, transparent 92%); mask-image: radial-gradient(closest-side, #000 46%, transparent 92%);
     filter: saturate(0.5) brightness(0.92); }
   .hero__foot { position: relative; z-index: 3; display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
@@ -178,6 +181,7 @@
   @keyframes fade { from { opacity: 0; } }
 </style>
 
+<div class="sky" aria-hidden="true"></div>
 </head>
 <body>
 <header class="top wrap">
@@ -188,7 +192,7 @@
 <main id="top">
   <section class="hero wrap" data-bg="#45598d" data-ink="#f3f5fa" aria-label="Introduction">
     <h1 aria-label="Aaditya Holani"><span class="line" aria-hidden="true">Aaditya</span><span class="line" aria-hidden="true">Holani</span></h1>
-    <div class="hero__obj" id="hero-obj" aria-hidden="true"><div class="tilt" id="hero-tilt"><div class="bob"><img src="img/box.jpg" alt="" width="1024" height="1024"></div></div></div>
+    <div class="hero__obj" id="hero-obj" aria-hidden="true"><div class="tilt" id="hero-tilt"><div class="bob"><img class="cut" src="img/box.webp" alt="" width="1024" height="1024"></div></div></div>
     <div class="hero__foot">
       <p>Supply chain consultant at OMP. I plan how stock moves, and I measure the work in days and dollars.</p>
       <p class="soft">Based in Atlanta, Georgia. Open to supply chain and S&amp;OP roles.</p>
@@ -217,7 +221,7 @@
   </div>
 
   <div id="work">
-    <section class="chapter wrap" data-bg="#b5825f" data-ink="#1e130b" aria-labelledby="omp-h">
+    <section class="chapter wrap" data-bg="#a8c2b7" data-ink="#102a21" aria-labelledby="omp-h">
       <div class="copy">
         <h2 id="omp-h" data-in>OMP</h2>
         <p class="role" data-in style="--d:1">Supply chain consultant, Sep 2024 to now. Delivering sales and operations planning for Mars Petcare, from requirements to go-live.</p>
@@ -228,10 +232,10 @@
           <li><b>30%</b><span>faster onboarding across 8 client sessions</span></li>
         </ul>
       </div>
-      <div class="obj" data-obj><div class="tilt"><div class="reveal"><img src="img/bags.jpg" alt="Three plain kraft pet food bags stacked on a tangerine backdrop" width="1024" height="1024" loading="lazy"></div></div></div>
+      <div class="obj" data-obj><div class="tilt"><div class="reveal"><img class="cut" src="img/bags.webp" alt="Three plain kraft pet food bags stacked on a tangerine backdrop" width="1024" height="1024" loading="lazy"></div></div></div>
     </section>
 
-    <section class="chapter wrap" data-bg="#a8c2b7" data-ink="#102a21" aria-labelledby="fl-h">
+    <section class="chapter wrap" data-bg="#b5825f" data-ink="#1e130b" aria-labelledby="fl-h">
       <div class="copy">
         <h2 id="fl-h" data-in>Formlabs</h2>
         <p class="role" data-in style="--d:1">Supply chain program manager, May 2023 to Apr 2024. Ran the replacement parts program end to end.</p>
@@ -242,7 +246,7 @@
           <li><b>18%</b><span>more effective program, tracked in Looker Studio</span></li>
         </ul>
       </div>
-      <div class="obj" data-obj><div class="tilt"><div class="reveal"><img src="img/printer.jpg" alt="A resin 3D printer with an orange cover on a mint backdrop" width="1024" height="1024" loading="lazy"></div></div></div>
+      <div class="obj" data-obj><div class="tilt"><div class="reveal"><img class="cut" src="img/printer.webp" alt="A resin 3D printer with an orange cover on a mint backdrop" width="1024" height="1024" loading="lazy"></div></div></div>
     </section>
 
     <section class="chapter wrap" data-bg="#d4c486" data-ink="#1d1a0f" aria-labelledby="dl-h">
@@ -256,7 +260,7 @@
           <li><b>15%</b><span>of man-hours saved across QA and UAT</span></li>
         </ul>
       </div>
-      <div class="obj" data-obj><div class="tilt"><div class="reveal"><img src="img/pen.jpg" alt="A fountain pen on a contract page on a yellow backdrop" width="1024" height="1024" loading="lazy"></div></div></div>
+      <div class="obj" data-obj><div class="tilt"><div class="reveal"><img class="cut" src="img/pen.webp" alt="A fountain pen on a contract page on a yellow backdrop" width="1024" height="1024" loading="lazy"></div></div></div>
     </section>
 
     <section class="chapter wrap" data-bg="#b1736b" data-ink="#1f0f0c" aria-labelledby="sc-h">
@@ -270,7 +274,7 @@
           <li><b>3</b><span>regions mapped in service dashboards</span></li>
         </ul>
       </div>
-      <div class="obj" data-obj><div class="tilt"><div class="reveal"><img src="img/buttons.jpg" alt="A steel elevator call button panel on a coral backdrop" width="1024" height="1024" loading="lazy"></div></div></div>
+      <div class="obj" data-obj><div class="tilt"><div class="reveal"><img class="cut" src="img/buttons.webp" alt="A steel elevator call button panel on a coral backdrop" width="1024" height="1024" loading="lazy"></div></div></div>
     </section>
   </div>
 
@@ -288,7 +292,7 @@
 
   <section class="contact wrap" id="contact" data-bg="#45598d" data-ink="#f3f5fa" aria-labelledby="ct-h">
     <h2 id="ct-h" data-in>Let's work together.</h2>
-    <div class="obj" data-obj aria-hidden="true"><div class="tilt"><div class="reveal"><img src="img/box.jpg" alt="" width="1024" height="1024" loading="lazy"></div></div></div>
+    <div class="obj" data-obj aria-hidden="true"><div class="tilt"><div class="reveal"><img class="cut" src="img/box.webp" alt="" width="1024" height="1024" loading="lazy"></div></div></div>
     <div class="reach" data-in style="--d:1">
       <span class="email" id="email">aaditya.holani@gmail.com</span>
       <button class="btn" id="copy" type="button"><span class="morph"><span id="copy-a">Copy email</span><span id="copy-b" aria-hidden="true">Copied</span></span></button>
@@ -316,16 +320,37 @@
     for (const c of word) { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; s.style.setProperty('--i', i++); line.appendChild(s); }
   });
 
-  // Colour chapters: the page takes the colour of the chapter under the middle of the screen
+  // Colour chapters as one gradient: every point down the page has a colour, blended across each chapter boundary;
+  // the backdrop is painted from the colours at the top and bottom of the screen, and the ink follows the middle
   const chapters = [...document.querySelectorAll('[data-bg]')];
   const root = document.documentElement.style;
+  const rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+  const cols = chapters.map((c) => rgb(c.dataset.bg));
+  let bounds = [];
+  const measure = () => { bounds = chapters.map((c) => { const r = c.getBoundingClientRect(); return [r.top + scrollY, r.bottom + scrollY]; }); };
+  const smooth = (t) => t * t * (3 - 2 * t);
+  function colourAt(y) {
+    const zone = innerHeight * 0.45;
+    for (let i = 0; i < bounds.length - 1; i++) {
+      const edge = bounds[i][1];
+      if (y < edge - zone) return cols[i];
+      if (y <= edge + zone) { const t = smooth((y - (edge - zone)) / (2 * zone)); return cols[i].map((v, k) => Math.round(v + (cols[i + 1][k] - v) * t)); }
+    }
+    return cols[cols.length - 1];
+  }
+  const css = (c) => `rgb(${c[0]} ${c[1]} ${c[2]})`;
   let current = null;
   function paint() {
-    const mid = innerHeight * 0.5;
+    if (!bounds.length) measure();
+    const top = colourAt(scrollY), bottom = colourAt(scrollY + innerHeight), mid = colourAt(scrollY + innerHeight / 2);
+    root.setProperty('--g1', css(top)); root.setProperty('--g2', css(bottom)); root.setProperty('--bg', css(mid));
+    const m = innerHeight * 0.5;
     let pick = chapters[0];
-    for (const c of chapters) { const r = c.getBoundingClientRect(); if (r.top <= mid && r.bottom > mid) pick = c; }
-    if (pick !== current) { current = pick; root.setProperty('--bg', pick.dataset.bg); root.setProperty('--ink', pick.dataset.ink); }
+    for (const c of chapters) { const r = c.getBoundingClientRect(); if (r.top <= m && r.bottom > m) pick = c; }
+    if (pick !== current) { current = pick; root.setProperty('--ink', pick.dataset.ink); }
   }
+  addEventListener('resize', () => { measure(); paint(); });
+  addEventListener('load', () => { measure(); paint(); });
 
   // Reveals and counters, once
   const fmt = (el, v) => { const d = +(el.dataset.dec || 0); return (el.dataset.prefix || '') + v.toFixed(d) + (el.dataset.suffix || ''); };
