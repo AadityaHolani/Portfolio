@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio site for **Aaditya Holani**, supply chain consultant at OMP in Atlanta.
+Personal portfolio site for **Aaditya Holani**, supply chain consultant at OMP in Atlanta. Live at **[aadityaholani.com](https://aadityaholani.com)**.
 
 Static HTML and CSS with a little vanilla JavaScript: no build step and no dependencies.
 
