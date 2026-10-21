@@ -105,7 +105,8 @@
 
   /* Hero: the shipping label */
   .hero { position: relative; padding-top: 150px; overflow: clip; }
-  .hero__box { position: absolute; z-index: 0; right: calc(50% - min(46vw, 760px)); top: 190px; width: min(40vw, 560px); rotate: -8deg; pointer-events: none; }
+  .hero__box { position: absolute; z-index: 0; left: calc(50% + 280px); top: 210px; width: clamp(300px, calc(50vw - 300px), 520px); rotate: -8deg; pointer-events: none; }
+  @media (max-width: 1179px) { .hero__box { display: none; } }
   .hero__box img { width: 100%; }
   .label {
     position: relative; z-index: 1; container-type: inline-size; margin-inline: auto; width: min(640px, 100%);
@@ -132,7 +133,6 @@
     .top nav { display: none; }
     .label { width: calc(100% + 2 * var(--margin) - 24px); margin-inline: calc(12px - var(--margin)); aspect-ratio: auto; min-height: 640px; }
     .label__meta { grid-template-columns: 1fr 1fr; }
-    .hero__box { width: 64vw; right: -14vw; top: 40px; }
   }
 
   /* Work: stacked folders */
@@ -148,8 +148,8 @@
   .tab h3 { font-family: var(--display); font-weight: 400; font-size: var(--s-lead); text-transform: uppercase; line-height: 1; }
   .folder__cat { align-self: center; font-size: var(--s-small); font-weight: 600; text-align: right; }
   .folder__body { padding-block: 40px 56px; row-gap: 32px; }
-  .plate { grid-column: 1 / 8; aspect-ratio: 16 / 10; background: color-mix(in srgb, var(--band) 88%, var(--fg)); display: grid; place-items: center; overflow: hidden; border-radius: var(--radius); }
-  .plate img { width: auto; height: 86%; object-fit: contain; }
+  .plate { position: relative; grid-column: 1 / 8; aspect-ratio: 16 / 10; background: color-mix(in srgb, var(--band) 88%, var(--fg)); overflow: hidden; border-radius: var(--radius); }
+  .plate img { position: absolute; inset: 7%; width: 86%; height: 86%; object-fit: contain; object-position: center; }
   .folder__copy { grid-column: 9 / 13; display: grid; align-content: start; gap: 28px; }
   .folder__copy p { max-width: 42ch; }
   .fig b { display: block; font-family: var(--display); font-weight: 400; font-size: var(--s-head); line-height: 0.9; }
