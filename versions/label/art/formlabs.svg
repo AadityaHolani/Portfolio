@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <!-- Formlabs: a resin printer beside the replacement-parts bin, 99% fill rate -->
+  <rect x="150" y="34" width="230" height="250" rx="12" fill="#ff6a3d"/>
+  <rect x="330" y="34" width="50" height="250" rx="0" fill="#e55a2e"/>
+  <rect x="150" y="34" width="230" height="12" rx="6" fill="#ff8a63"/>
+  <rect x="264" y="52" width="10" height="72" fill="#b4b9c3"/>
+  <rect x="226" y="122" width="86" height="10" rx="2" fill="#c9ccd3"/>
+  <rect x="244" y="132" width="50" height="50" fill="#c9ccd3"/>
+  <rect x="246" y="134" width="3" height="46" fill="#12131a" fill-opacity="0.55"/><rect x="246" y="134" width="46" height="3" fill="#12131a" fill-opacity="0.55"/><rect x="258" y="134" width="3" height="46" fill="#12131a" fill-opacity="0.55"/><rect x="246" y="146" width="46" height="3" fill="#12131a" fill-opacity="0.55"/><rect x="270" y="134" width="3" height="46" fill="#12131a" fill-opacity="0.55"/><rect x="246" y="158" width="46" height="3" fill="#12131a" fill-opacity="0.55"/><rect x="282" y="134" width="3" height="46" fill="#12131a" fill-opacity="0.55"/><rect x="246" y="170" width="46" height="3" fill="#12131a" fill-opacity="0.55"/>
+  <rect x="200" y="250" width="138" height="22" rx="3" fill="#12131a"/>
+  <rect x="140" y="280" width="250" height="114" rx="10" fill="#9aa0ab"/>
+  <rect x="140" y="280" width="250" height="16" fill="#b4b9c3"/>
+  <rect x="222" y="316" width="86" height="52" rx="5" fill="#12131a"/>
+  <rect x="232" y="326" width="40" height="5" rx="2" fill="#f1f2ef" fill-opacity="0.7"/>
+  <rect x="232" y="337" width="26" height="5" rx="2" fill="#f1f2ef" fill-opacity="0.4"/>
+  <rect x="470" y="188" width="56" height="74" rx="8" fill="#c9ccd3"/>
+  <rect x="534" y="210" width="88" height="52" rx="6" fill="#12131a" fill-opacity="0.75"/>
+  <circle cx="650" cy="232" r="30" fill="#9aa0ab"/>
+  <circle cx="650" cy="232" r="11" fill="#b98f60"/>
+  <rect x="506" y="176" width="26" height="86" rx="4" fill="#f1f2ef"/>
+  <path d="M440 254H700L684 394H456Z" fill="#12131a"/>
+  <rect x="440" y="254" width="260" height="20" fill="#2a2c38"/>
+  <text x="462" y="269" font-family="Work Sans" font-weight="600" font-size="13" fill="#f1f2ef">Replacement parts</text>
+  <rect x="506" y="294" width="128" height="76" rx="5" fill="#f1f2ef"/>
+  <text x="520" y="318" font-family="Work Sans" font-weight="600" font-size="12" fill="#12131a">Fill rate</text>
+  <text x="520" y="358" font-family="Anton" font-size="38" fill="#12131a">99%</text>
+</svg>

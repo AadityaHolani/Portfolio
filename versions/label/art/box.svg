@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" width="600" height="560">
+  <!-- The carton: three kraft faces, packing tape, and the shipping label from the hero -->
+  <path d="M300 40L560 170L300 300L40 170Z" fill="#d9bb92"/>
+  <path d="M40 170L300 300V530L40 400Z" fill="#c9a174"/>
+  <path d="M300 300L560 170V400L300 530Z" fill="#b98f60"/>
+  <path d="M152 114L188 96L448 226L412 244Z" fill="#e8d3ad"/>
+  <path d="M412 244L448 226V292L412 310Z" fill="#cfae84"/>
+  <g transform="matrix(1 0.5 0 1 0 0)">
+    <rect x="104" y="196" width="130" height="104" rx="3" fill="#f1f2ef"/>
+    <rect x="104" y="196" width="130" height="22" rx="3" fill="#12131a"/>
+    <text x="114" y="212" font-family="Anton" font-size="14" fill="#f1f2ef">SHIP TO ATLANTA</text>
+    <text x="114" y="236" font-family="Work Sans" font-weight="600" font-size="11" fill="#12131a">From Nagpur, India</text>
+    <text x="114" y="252" font-family="Work Sans" font-size="11" fill="#12131a">Via College Station</text>
+    <rect x="122" y="262" width="3" height="22" fill="#12131a"/><rect x="127" y="262" width="2" height="22" fill="#12131a"/><rect x="131" y="262" width="4" height="22" fill="#12131a"/><rect x="137" y="262" width="2" height="22" fill="#12131a"/><rect x="141" y="262" width="2" height="22" fill="#12131a"/><rect x="145" y="262" width="5" height="22" fill="#12131a"/><rect x="152" y="262" width="2" height="22" fill="#12131a"/><rect x="156" y="262" width="3" height="22" fill="#12131a"/><rect x="161" y="262" width="2" height="22" fill="#12131a"/><rect x="165" y="262" width="4" height="22" fill="#12131a"/><rect x="171" y="262" width="2" height="22" fill="#12131a"/><rect x="175" y="262" width="3" height="22" fill="#12131a"/><rect x="180" y="262" width="2" height="22" fill="#12131a"/><rect x="184" y="262" width="4" height="22" fill="#12131a"/><rect x="190" y="262" width="3" height="22" fill="#12131a"/><rect x="195" y="262" width="2" height="22" fill="#12131a"/><rect x="199" y="262" width="4" height="22" fill="#12131a"/><rect x="205" y="262" width="2" height="22" fill="#12131a"/><rect x="209" y="262" width="3" height="22" fill="#12131a"/><rect x="214" y="262" width="2" height="22" fill="#12131a"/>
+    <text x="122" y="296" font-family="Work Sans" font-size="9" fill="#12131a">AH-ATL-2024</text>
+  </g>
+  <g transform="matrix(1 -0.5 0 1 0 0)">
+    <rect x="456" y="458" width="64" height="26" rx="3" fill="#ff6a3d"/>
+    <text x="466" y="476" font-family="Anton" font-size="14" fill="#12131a">PRIORITY</text>
+  </g>
+</svg>

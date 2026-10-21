@@ -105,9 +105,9 @@
 
   /* Hero: the shipping label */
   .hero { position: relative; padding-top: 150px; overflow: clip; }
-  .hero__box { position: absolute; z-index: 0; left: calc(50% + 280px); top: 210px; width: clamp(300px, calc(50vw - 300px), 520px); rotate: -8deg; pointer-events: none; }
+  .hero__box { position: absolute; z-index: 0; left: calc(50% + 280px); top: 210px; width: clamp(300px, calc(50vw - 300px), 480px); pointer-events: none; }
   @media (max-width: 1179px) { .hero__box { display: none; } }
-  .hero__box img { width: 100%; }
+  .hero__box img, .visit__pic img { width: 100%; height: auto; }
   .label {
     position: relative; z-index: 1; container-type: inline-size; margin-inline: auto; width: min(640px, 100%);
     aspect-ratio: 5 / 7; background: var(--paper); color: var(--ink); border-radius: 14px;
@@ -296,7 +296,7 @@
 
   /* Contact: the card on a picture */
   .visit { position: relative; margin-top: var(--gap); min-height: max(100svh, 760px); background: var(--surface); overflow: hidden; }
-  .visit__pic { position: absolute; left: var(--margin); top: 50%; width: min(52vw, 820px); translate: 0 -50%; rotate: 6deg; pointer-events: none; }
+  .visit__pic { position: absolute; left: var(--margin); top: 50%; width: min(46vw, 640px); translate: 0 -50%; pointer-events: none; }
   .visit__card {
     position: absolute; top: 60px; right: max(var(--margin), env(safe-area-inset-right, 0px)); width: 400px; background: var(--paper); color: var(--ink);
     padding: 32px 32px 0; border-radius: 8px; display: grid; gap: 20px; overflow: hidden;
@@ -364,7 +364,7 @@
       <a class="btn" href="mailto:aaditya.holani@gmail.com?subject=Hello%20Aaditya">Email me</a>
     </header>
 
-    <div class="hero__box" id="hero-box" aria-hidden="true"><img src="img/box.webp" alt="" width="596" height="596"></div>
+    <div class="hero__box" id="hero-box" aria-hidden="true"><img src="img/label/box.webp" alt="" width="1040" height="980"></div>
 
     <article class="label" aria-labelledby="name">
       <h1 class="d" id="name"><span class="line"><span style="--l:0">Aaditya</span></span><span class="line"><span style="--l:1">Holani</span></span></h1>
@@ -392,7 +392,7 @@
       <article class="folder" style="--i:0" aria-labelledby="omp-h">
         <div class="folder__strip wrap"><div class="tab"><h3 id="omp-h">OMP</h3></div><p class="folder__cat">Supply chain consultant, Sep 2024 to now</p></div>
         <div class="folder__body grid wrap">
-          <figure class="plate" data-in><img src="img/bags.webp" alt="Three plain kraft pet food bags stacked" width="648" height="648" loading="lazy"></figure>
+          <figure class="plate" data-in><img src="img/label/omp.webp" alt="A monitor showing the S&amp;OP backlog for Mars Petcare: 45 user stories with the 15 shipped first highlighted, and user adoption up 25%" width="1080" height="804" loading="lazy"></figure>
           <div class="folder__copy">
             <p data-in style="--d:1">I deliver sales and operations planning for Mars Petcare, from requirements to go-live. I turned stakeholder asks into more than 45 user stories, ranked them, and shipped the 15 that mattered most first.</p>
             <p class="fig" data-in style="--d:2"><b data-count="25" data-suffix="%">25%</b><span>higher user adoption after the 15 high-impact features went live.</span></p>
@@ -408,7 +408,7 @@
       <article class="folder" style="--i:1" aria-labelledby="fl-h">
         <div class="folder__strip wrap"><div class="tab"><h3 id="fl-h">Formlabs</h3></div><p class="folder__cat">Supply chain program manager, May 2023 to Apr 2024</p></div>
         <div class="folder__body grid wrap">
-          <figure class="plate" data-in><img src="img/printer.webp" alt="A resin 3D printer with an orange cover" width="636" height="636" loading="lazy"></figure>
+          <figure class="plate" data-in><img src="img/label/formlabs.webp" alt="An orange resin 3D printer beside a bin of replacement parts labelled with a 99% fill rate" width="1120" height="720" loading="lazy"></figure>
           <div class="folder__copy">
             <p data-in style="--d:1">I ran the replacement parts program end to end: quoting parts across more than one vendor, landing 13 critical service parts on time, and tracking how the program performed in Looker Studio.</p>
             <p class="fig" data-in style="--d:2"><b data-count="99" data-suffix="%">99%</b><span>fill rate on replacement parts, with $240k of excess stock avoided.</span></p>
@@ -424,7 +424,7 @@
       <article class="folder" style="--i:2" aria-labelledby="dl-h">
         <div class="folder__strip wrap"><div class="tab"><h3 id="dl-h">Deloitte</h3></div><p class="folder__cat">Product analyst, Jul 2021 to Jul 2022</p></div>
         <div class="folder__body grid wrap">
-          <figure class="plate" data-in><img src="img/pen.webp" alt="A fountain pen resting on a contract page" width="890" height="890" loading="lazy"></figure>
+          <figure class="plate" data-in><img src="img/label/deloitte.webp" alt="A laptop open on a signed contract, showing a cycle time of 5 days, down from 40" width="1360" height="744" loading="lazy"></figure>
           <div class="folder__copy">
             <p data-in style="--d:1">I rolled out Salesforce CPQ and DocuSign CLM for clients, putting quoting and contract signing into one flow. A contract that took 40 days to close took 5.</p>
             <p class="fig" data-in style="--d:2"><b data-count="2.5" data-prefix="$" data-suffix="M" data-dec="1">$2.5M</b><span>saved a year by cutting contract cycle time from 40 days to 5.</span></p>
@@ -440,7 +440,7 @@
       <article class="folder" style="--i:3" aria-labelledby="sc-h">
         <div class="folder__strip wrap"><div class="tab"><h3 id="sc-h">Schindler</h3></div><p class="folder__cat">Data analyst intern, Jun to Jul 2020</p></div>
         <div class="folder__body grid wrap">
-          <figure class="plate" data-in><img src="img/buttons.webp" alt="A steel elevator call button panel" width="598" height="598" loading="lazy"></figure>
+          <figure class="plate" data-in><img src="img/label/schindler.webp" alt="A tablet showing a service renewals dashboard: renewals up 25%, $50k of revenue in a month, lead attrition down 15%" width="1080" height="800" loading="lazy"></figure>
           <div class="folder__copy">
             <p data-in style="--d:1">I read elevator service data for the early signs that a customer was about to cancel their maintenance contract, and mapped service across three regions in dashboards.</p>
             <p class="fig" data-in style="--d:2"><b data-count="50" data-prefix="$" data-suffix="k">$50k</b><span>in revenue in one month from the renewal analysis.</span></p>
@@ -565,7 +565,7 @@
   </section>
 
   <section class="visit" id="contact" aria-labelledby="ct-h">
-    <div class="visit__pic" id="visit-pic" aria-hidden="true"><img src="img/box.webp" alt="" width="596" height="596" loading="lazy"></div>
+    <div class="visit__pic" id="visit-pic" aria-hidden="true"><img src="img/label/box.webp" alt="" width="1040" height="980" loading="lazy"></div>
     <div class="visit__card" data-in>
       <h2 class="d" id="ct-h">Get in touch</h2>
       <address>Atlanta, Georgia<br>United States, Eastern time</address>
@@ -690,7 +690,7 @@
   const box = document.getElementById('hero-box'), vpic = document.getElementById('visit-pic');
   function drift() {
     if (reduce.matches) return;
-    if (scrollY < innerHeight * 1.5) box.style.transform = `translate3d(0, ${(scrollY * 0.18).toFixed(1)}px, 0) rotate(${(scrollY * 0.01).toFixed(2)}deg)`;
+    if (scrollY < innerHeight * 1.5) box.style.transform = `translate3d(0, ${(scrollY * 0.18).toFixed(1)}px, 0)`;
     const r = vpic.getBoundingClientRect();
     if (r.top < innerHeight && r.bottom > 0) vpic.style.transform = `translate3d(0, ${((r.top - innerHeight / 2) * -0.08).toFixed(1)}px, 0)`;
   }
