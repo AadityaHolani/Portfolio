@@ -8,7 +8,7 @@ Static HTML and CSS with a little vanilla JavaScript: no build step and no depen
 
 | Path | What it is |
 | --- | --- |
-| `site/` | The live site: muted colour chapters with still-life photography, counting figures and a results ticker. |
+| `site/` | The live site, built as shipping paperwork: the hero is a shipping label (Nagpur to Atlanta), each job is a filed folder, the dollar results add up on a packing slip, a pick ticket prices a service level live, and the footer is the back of the label. |
 | `versions/route/` | An alternative design: the career drawn as a supply route in a sticky sidebar. |
 
 The still-life photographs are illustrative and were generated with Figma AI.
