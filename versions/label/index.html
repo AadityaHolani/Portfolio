@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="portfolio-version" content="label">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Aaditya Holani, supply chain consultant at OMP in Atlanta. Sales and operations planning, inventory and supply chain analytics.">
+<link rel="canonical" href="https://aadityaholani.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aadityaholani.com/">
+<meta property="og:site_name" content="Aaditya Holani">
+<meta property="og:title" content="Aaditya Holani, Supply Chain">
+<meta property="og:description" content="Supply chain consultant at OMP. 25% higher user adoption, 99% fill rate, $2.5M saved a year.">
+<meta property="og:image" content="https://aadityaholani.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aaditya Holani, supply chain consultant at OMP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aaditya Holani, Supply Chain">
+<meta name="twitter:description" content="Supply chain consultant at OMP. 25% higher user adoption, 99% fill rate, $2.5M saved a year.">
+<meta name="twitter:image" content="https://aadityaholani.com/img/og.jpg">
+<meta name="theme-color" content="#1a2039">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3f1ec'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Impact,Arial Narrow,sans-serif' font-size='34' fill='%2312131a'%3EAH%3C/text%3E%3C/svg%3E">
+<title>Aaditya Holani, Supply Chain</title>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Aaditya Holani","url":"https://aadityaholani.com/","jobTitle":"Supply Chain Consultant","worksFor":{"@type":"Organization","name":"OMP"},"address":{"@type":"PostalAddress","addressLocality":"Atlanta","addressRegion":"GA","addressCountry":"US"},"email":"mailto:aaditya.holani@gmail.com","alumniOf":[{"@type":"CollegeOrUniversity","name":"Texas A&M University"},{"@type":"CollegeOrUniversity","name":"Visvesvaraya National Institute of Technology"}],"knowsAbout":["Sales and operations planning","Inventory planning","Service parts","Supply chain analytics","CPQ","Python","SQL"],"sameAs":["https://www.linkedin.com/in/aadityaholani","https://github.com/AadityaHolani"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  /* Direction: the page is the object. The career is shipping paperwork: the hero is the shipping label
+     (from Nagpur, to Atlanta), the jobs are filed folders, the money is a packing slip, the letter has a
+     tear-off strip and the footer is the back of the label. Navy ground, label stock, thermal ink, one safety orange. */
+  :root {
+    --bg: #1a2039;
+    --surface: #232b4b;
+    --paper: #f1f2ef;
+    --ink: #12131a;
+    --muted: #aab1cb;
+    --accent: #ff6a3d;
+    --kraft: #c9a174;
+    --kraft-2: #d9bb92;
+    --kraft-3: #b98f60;
+
+    --display: "Anton", "Impact", "Arial Narrow", sans-serif;
+    --text: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+
+    --s-small: 0.875rem;
+    --s-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+    --s-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+    --s-head: clamp(2.75rem, 1.4rem + 4.6vw, 5.5rem);
+    --s-display: clamp(6.5rem, 2rem + 15vw, 15.5rem);
+
+    --margin: max(16px, min(4vw, 56px));
+    --gap: clamp(120px, 14vw, 220px);
+    --radius: 6px;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--kraft); }
+  body { margin: 0; color: var(--paper); font: 400 var(--s-body)/1.5 var(--text); -webkit-font-smoothing: antialiased; }
+  ::selection { background: var(--accent); color: var(--ink); }
+  h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+  ul, ol { padding: 0; list-style: none; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .wrap { padding-left: max(var(--margin), env(safe-area-inset-left, 0px)); padding-right: max(var(--margin), env(safe-area-inset-right, 0px)); }
+  .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(16px, 2vw, 32px); }
+  .d { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.86; }
+  .sec-h { font-size: var(--s-head); }
+  .tab-num { font-variant-numeric: tabular-nums; }
+
+  main { background: var(--bg); }
+
+  /* Buttons and links */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 22px;
+    border: 0; border-radius: var(--radius); background: var(--accent); color: var(--ink);
+    font: 600 var(--s-body)/1 var(--text); text-decoration: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
+    transition: transform 140ms var(--ease-out), background-color 180ms ease;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn--ink { background: var(--ink); color: var(--paper); }
+  .link { text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.22em; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); transition: text-decoration-color 180ms ease; }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover { background: #ff835e; }
+    .btn--ink:hover { background: #2a2c38; }
+    .link:hover { text-decoration-color: currentColor; }
+  }
+
+  /* Top row */
+  .top { position: absolute; z-index: 5; inset: 0 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; padding-top: max(24px, env(safe-area-inset-top, 0px)); }
+  .mono { justify-self: start; font-family: var(--display); font-size: 1.75rem; line-height: 1; text-decoration: none; letter-spacing: 0; }
+  .top nav { display: flex; gap: clamp(16px, 2.4vw, 36px); font-weight: 600; }
+  .top nav a { text-decoration: none; padding-block: 10px; }
+  .top .btn { justify-self: end; }
+  @media (hover: hover) and (pointer: fine) { .top nav a:hover { color: var(--accent); } }
+  .top nav a { transition: color 180ms ease; }
+
+  /* Hero: the shipping label */
+  .hero { position: relative; padding-top: 150px; overflow: clip; }
+  .hero__box { position: absolute; z-index: 0; right: calc(50% - min(46vw, 760px)); top: 190px; width: min(40vw, 560px); rotate: -8deg; pointer-events: none; }
+  .hero__box img { width: 100%; }
+  .label {
+    position: relative; z-index: 1; container-type: inline-size; margin-inline: auto; width: min(640px, 100%);
+    aspect-ratio: 5 / 7; background: var(--paper); color: var(--ink); border-radius: 14px;
+    padding: clamp(24px, 7.5cqi, 48px); display: grid; grid-template-rows: auto auto auto auto 1fr auto; gap: 28px;
+  }
+  .label__route { padding-top: 20px; border-top: 8px solid var(--ink); display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: var(--s-small); line-height: 1.4; }
+  .label__route b, .label__meta dt { display: block; font-weight: 600; }
+  .label__route span { font-size: var(--s-body); }
+  .label h1 { font-size: 26.5cqi; line-height: 0.84; letter-spacing: -0.005em; }
+  .label h1 .line { display: block; overflow: clip; padding-bottom: 0.03em; }
+  .label h1 .line > span { display: block; }
+  .label .lead { font-size: var(--s-lead); line-height: 1.3; max-width: 28ch; text-wrap: pretty; }
+  .label__svc { align-self: start; display: flex; justify-content: space-between; align-items: center; gap: 16px; background: var(--ink); color: var(--paper); padding: 16px 20px; font-weight: 600; border-radius: 4px; }
+  .label__svc .d { font-size: var(--s-lead); line-height: 1; color: var(--accent); }
+  .label__meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; font-size: var(--s-small); line-height: 1.4; }
+  .label__meta dd { font-size: var(--s-small); }
+  .label__code { display: grid; gap: 8px; }
+  .label__code .bars { width: 100%; height: 72px; fill: var(--ink); }
+  .label__code span { font-size: var(--s-small); letter-spacing: 0.04em; font-variant-numeric: tabular-nums; text-align: center; }
+  @media (max-width: 700px) {
+    .hero { padding-top: 96px; }
+    .top { grid-template-columns: 1fr auto; }
+    .top nav { display: none; }
+    .label { width: calc(100% + 2 * var(--margin) - 24px); margin-inline: calc(12px - var(--margin)); aspect-ratio: auto; min-height: 640px; }
+    .label__meta { grid-template-columns: 1fr 1fr; }
+    .hero__box { width: 64vw; right: -14vw; top: 40px; }
+  }
+
+  /* Work: stacked folders */
+  .work { padding-top: var(--gap); }
+  .work > .sec-h { margin-bottom: 48px; }
+  .folders { display: grid; margin-inline: calc(-1 * max(var(--margin), env(safe-area-inset-left, 0px))); }
+  .folder { --fg: var(--ink); background: var(--band); color: var(--fg); scroll-margin-top: 0; }
+  .folder__strip { height: 64px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
+  .tab {
+    align-self: stretch; display: flex; align-items: center; min-width: min(280px, 60%); padding: 10px 40px 4px 20px; margin-top: 10px;
+    background: var(--tab); color: var(--tab-ink); clip-path: polygon(0 100%, 0 10px, 10px 0, calc(100% - 30px) 0, 100% 100%);
+  }
+  .tab h3 { font-family: var(--display); font-weight: 400; font-size: var(--s-lead); text-transform: uppercase; line-height: 1; }
+  .folder__cat { align-self: center; font-size: var(--s-small); font-weight: 600; text-align: right; }
+  .folder__body { padding-block: 40px 56px; row-gap: 32px; }
+  .plate { grid-column: 1 / 8; aspect-ratio: 16 / 10; background: color-mix(in srgb, var(--band) 88%, var(--fg)); display: grid; place-items: center; overflow: hidden; border-radius: var(--radius); }
+  .plate img { width: auto; height: 86%; object-fit: contain; }
+  .folder__copy { grid-column: 9 / 13; display: grid; align-content: start; gap: 28px; }
+  .folder__copy p { max-width: 42ch; }
+  .fig b { display: block; font-family: var(--display); font-weight: 400; font-size: var(--s-head); line-height: 0.9; }
+  .fig span { display: block; margin-top: 6px; max-width: 30ch; }
+  .more { display: grid; gap: 12px; }
+  .more li { display: grid; grid-template-columns: 5.5ch 1fr; gap: 12px; align-items: baseline; }
+  .more b { font-family: var(--display); font-weight: 400; font-size: var(--s-lead); line-height: 1; }
+  .folder:nth-child(1) { --band: var(--paper); --tab: var(--ink); --tab-ink: var(--paper); }
+  .folder:nth-child(2) { --band: var(--kraft); --tab: var(--paper); --tab-ink: var(--ink); }
+  .folder:nth-child(3) { --band: var(--ink); --fg: var(--paper); --tab: var(--kraft); --tab-ink: var(--ink); }
+  .folder:nth-child(4) { --band: #3a4672; --fg: var(--paper); --tab: var(--paper); --tab-ink: var(--ink); }
+  @media (min-width: 900px) and (min-height: 700px) {
+    .folder { position: sticky; top: calc(var(--i) * 64px); min-height: calc(100svh - var(--i) * 64px); }
+  }
+  @media (max-width: 899px) {
+    .plate, .folder__copy { grid-column: 1 / -1; }
+    .plate { aspect-ratio: 4 / 3; }
+    .folder__body { padding-block: 20px 40px; }
+    .folder__strip { height: auto; flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 10px; }
+    .tab { min-width: 0; height: 44px; margin-top: 0; padding-right: 44px; }
+    .folder__cat { align-self: flex-start; text-align: left; }
+  }
+
+  /* Results: the total and its packing slip */
+  .total { padding-top: var(--gap); align-items: stretch; }
+  .total__left { grid-column: 1 / 7; display: flex; flex-direction: column; justify-content: space-between; gap: 48px; }
+  .total__left .note { margin-top: 20px; max-width: 34ch; }
+  .total__sum b { display: block; font-family: var(--display); font-weight: 400; font-size: var(--s-display); line-height: 0.8; letter-spacing: -0.01em; }
+  .total__sum span { display: block; margin-top: 20px; max-width: 36ch; }
+  .slip {
+    grid-column: 8 / 13; align-self: start; background: var(--paper); color: var(--ink); padding: 32px 32px 56px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 95.833% 100%, 91.667% calc(100% - 12px), 87.5% 100%, 83.333% calc(100% - 12px), 79.167% 100%, 75% calc(100% - 12px), 70.833% 100%, 66.667% calc(100% - 12px), 62.5% 100%, 58.333% calc(100% - 12px), 54.167% 100%, 50% calc(100% - 12px), 45.833% 100%, 41.667% calc(100% - 12px), 37.5% 100%, 33.333% calc(100% - 12px), 29.167% 100%, 25% calc(100% - 12px), 20.833% 100%, 16.667% calc(100% - 12px), 12.5% 100%, 8.333% calc(100% - 12px), 4.167% 100%, 0 calc(100% - 12px));
+  }
+  .slip h3 { font-family: var(--display); font-weight: 400; font-size: var(--s-lead); text-transform: uppercase; line-height: 1; margin-bottom: 20px; }
+  .slip h4 { margin: 22px 0 6px; font-size: var(--s-small); font-weight: 600; }
+  .slip h4:first-of-type { margin-top: 0; }
+  .row { display: flex; align-items: baseline; gap: 8px; font-size: var(--s-small); line-height: 1.45; padding-block: 4px; }
+  .row .leader { flex: 1; min-width: 16px; border-bottom: 4px dotted color-mix(in srgb, var(--ink) 35%, transparent); translate: 0 -4px; }
+  .row .v { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .row--total { margin: 24px -14px 0; padding: 14px; background: var(--ink); color: var(--paper); font-size: var(--s-body); border-radius: 4px; }
+  .row--total .leader { border-color: color-mix(in srgb, var(--paper) 35%, transparent); }
+  @media (max-width: 899px) {
+    .total__left, .slip { grid-column: 1 / -1; }
+    .slip { margin-top: 48px; }
+  }
+
+  /* Hire me for: the bill of lading */
+  .bol-sec { padding-top: var(--gap); }
+  .bol { background: var(--paper); color: var(--ink); border-radius: var(--radius); padding: clamp(24px, 4vw, 56px); display: grid; gap: 32px; }
+  .bol__head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+  .bol__head p { max-width: 46ch; }
+  .bol table { width: 100%; border-collapse: collapse; font-size: var(--s-body); }
+  .bol th { text-align: left; font-size: var(--s-small); font-weight: 600; padding: 0 16px 12px 0; border-bottom: 6px solid var(--ink); }
+  .bol td { padding: 20px 16px 20px 0; vertical-align: top; border-bottom: 2px solid color-mix(in srgb, var(--ink) 15%, transparent); }
+  .bol td:first-child { width: 26%; }
+  .bol td:first-child b { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: var(--s-lead); line-height: 1.05; display: block; }
+  .bol td:last-child { width: 30%; font-weight: 600; }
+  .bol tr:last-child td { border-bottom: 0; }
+  .bol__foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; background: var(--ink); color: var(--paper); margin: 0 calc(-1 * clamp(24px, 4vw, 56px)) calc(-1 * clamp(24px, 4vw, 56px)); padding: 20px clamp(24px, 4vw, 56px); border-radius: 0 0 var(--radius) var(--radius); }
+  .bol__foot p { font-weight: 600; }
+  @media (max-width: 760px) {
+    .bol thead { display: none; }
+    .bol tr { display: grid; gap: 6px; padding-block: 20px; border-bottom: 2px solid color-mix(in srgb, var(--ink) 15%, transparent); }
+    .bol td { padding: 0; border: 0; width: auto !important; }
+    .bol tr:last-child { border-bottom: 0; }
+  }
+
+  /* The live thing: a pick ticket that prices a service level */
+  .ticket-sec { padding-top: var(--gap); }
+  .ticket { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); background: var(--kraft-2); color: var(--ink); border-radius: var(--radius); overflow: hidden; }
+  .ticket::before, .ticket::after { content: ""; position: absolute; left: calc(700% / 12); width: 36px; height: 36px; border-radius: 50%; background: var(--bg); translate: -50% 0; }
+  .ticket::before { top: -18px; } .ticket::after { bottom: -18px; }
+  .ticket__main { padding: clamp(28px, 4vw, 56px); display: grid; gap: 24px; align-content: start; }
+  .ticket__main p { max-width: 44ch; }
+  .ticket__stub { padding: clamp(28px, 4vw, 56px); background: var(--kraft); border-left: 6px dotted color-mix(in srgb, var(--ink) 45%, transparent); display: grid; gap: 22px; align-content: start; }
+  .ctl { display: grid; gap: 12px; }
+  .ctl label { font-weight: 600; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .ctl output { font-family: var(--display); font-size: var(--s-head); line-height: 0.9; font-weight: 400; font-variant-numeric: tabular-nums; }
+  .ctl input[type="range"] { width: 100%; height: 44px; margin: 0; accent-color: var(--ink); cursor: pointer; background: transparent; -webkit-appearance: none; appearance: none; }
+  .ctl input[type="range"]::-webkit-slider-runnable-track { height: 10px; background: var(--ink); border-radius: 5px; }
+  .ctl input[type="range"]::-moz-range-track { height: 10px; background: var(--ink); border-radius: 5px; }
+  .ctl input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 32px; height: 32px; margin-top: -11px; border-radius: 50%; background: var(--accent); border: 4px solid var(--ink); transition: transform 140ms var(--ease-out); }
+  .ctl input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--accent); border: 4px solid var(--ink); }
+  .ctl input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.12); }
+  .presets { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { min-height: 44px; padding: 0 16px; border: 0; border-radius: var(--radius); background: color-mix(in srgb, var(--ink) 10%, transparent); color: var(--ink); font: 600 var(--s-small)/1 var(--text); cursor: pointer; transition: transform 140ms var(--ease-out), background-color 180ms ease; }
+  .chip:active { transform: scale(0.97); }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  @media (hover: hover) and (pointer: fine) { .chip:not([aria-pressed="true"]):hover { background: color-mix(in srgb, var(--ink) 18%, transparent); } }
+  .out { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16px; align-items: center; }
+  .out b { font-family: var(--display); font-weight: 400; font-size: var(--s-head); line-height: 0.9; font-variant-numeric: tabular-nums; }
+  .out b small { font-size: var(--s-lead); margin-left: 6px; }
+  .ticket .fine { font-size: var(--s-small); }
+  @media (max-width: 899px) {
+    .ticket { grid-template-columns: 1fr; }
+    .ticket::before, .ticket::after { display: none; }
+    .ticket__stub { border-left: 0; border-top: 6px dotted color-mix(in srgb, var(--ink) 45%, transparent); }
+  }
+
+  /* Letter with a tear-off strip */
+  .letter-sec { padding-top: var(--gap); display: grid; justify-items: center; }
+  .letter { width: min(640px, 100%); }
+  .sheet { background: var(--paper); color: var(--ink); padding: clamp(24px, 6vw, 48px); display: grid; gap: 1.1em; }
+  .sheet h2 { font-family: var(--text); text-transform: none; font-weight: 600; font-size: var(--s-lead); letter-spacing: 0; line-height: 1.3; margin-bottom: 8px; }
+  .sheet .who { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+  .sheet .seal { width: 48px; height: 48px; border-radius: 50%; background: var(--ink); color: var(--paper); display: grid; place-items: center; font-family: var(--display); font-size: 1.25rem; }
+  .sheet .sign { margin-top: 12px; font-style: italic; font-size: var(--s-lead); }
+  .sheet .sign + span { font-size: var(--s-small); margin-top: -0.9em; }
+  .scallop { display: block; width: 100%; height: 16px; fill: var(--paper); }
+  .scallop--down { transform: scaleY(-1); margin-top: -1px; }
+  .strip { margin-top: 18px; border-top: 6px dotted color-mix(in srgb, var(--paper) 45%, transparent); padding-top: 18px; }
+  .strip__in { background: var(--paper); color: var(--ink); min-height: 72px; padding: 12px 12px 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-radius: 4px; }
+  .strip__in .email { font-weight: 600; font-size: var(--s-body); overflow-wrap: anywhere; }
+  .morph { display: inline-grid; }
+  .morph > span { grid-area: 1 / 1; transition: opacity 200ms ease, filter 200ms ease, transform 200ms var(--ease-out); }
+  .morph > span[aria-hidden="true"] { opacity: 0; filter: blur(2px); transform: scale(0.96); }
+  @media (max-width: 560px) { .strip__in { padding: 16px; } .strip__in .btn { width: 100%; } }
+
+  /* Schooling and kit: cards that fold into spines */
+  .deck-sec { padding-top: var(--gap); }
+  .deck-sec .sec-h { margin-bottom: 40px; }
+  .deck { display: grid; gap: 12px; }
+  .card { background: var(--tone); color: var(--ink); padding: 32px; border-radius: var(--radius); display: grid; grid-template-rows: auto 1fr auto; gap: 16px; min-height: 280px; }
+  .card:nth-child(3n + 1) { --tone: var(--kraft); }
+  .card:nth-child(3n + 2) { --tone: var(--kraft-2); }
+  .card:nth-child(3n + 3) { --tone: var(--kraft-3); }
+  .card h3 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.875rem); line-height: 1.05; max-width: 18ch; }
+  .card p { max-width: 46ch; }
+  .card footer { display: flex; justify-content: space-between; gap: 16px; font-weight: 600; }
+  .deck-foot { margin-top: 48px; font-size: var(--s-lead); line-height: 1.3; max-width: 40ch; }
+  /* Pinned on large screens with script */
+  .pin .deck-wrap { height: 250svh; }
+  .pin .deck-stage { position: sticky; top: 0; height: 100svh; padding-top: 160px; display: grid; align-content: start; }
+  .pin .deck { position: relative; height: 380px; overflow: hidden; display: block; }
+  .pin .card { position: absolute; top: 0; left: 0; width: 620px; height: 100%; transition: transform 480ms var(--ease-in-out); cursor: default; }
+  .pin .card.is-spine { cursor: pointer; }
+  .pin .card.is-next { visibility: hidden; transition: none; }
+  .spine { display: none; }
+  .pin .spine { display: block; position: absolute; left: 0; top: 0; bottom: 0; width: var(--spine, 120px); padding: 28px 0; writing-mode: vertical-rl; rotate: 180deg; text-align: right; font-family: var(--display); font-size: var(--s-lead); text-transform: uppercase; line-height: var(--spine, 120px); opacity: 0; visibility: hidden; transition: opacity 180ms ease, visibility 0s 180ms; }
+  .pin .card > :not(.spine) { transition: opacity 180ms ease, visibility 0s; }
+  .pin .card.is-spine > :not(.spine) { opacity: 0; visibility: hidden; transition: opacity 180ms ease, visibility 0s 180ms; }
+  .pin .card.is-spine .spine { opacity: 1; visibility: visible; transition: opacity 180ms ease, visibility 0s; }
+  .pin .deck-sec .sec-h { margin-bottom: 40px; }
+
+  /* Contact: the card on a picture */
+  .visit { position: relative; margin-top: var(--gap); min-height: max(100svh, 760px); background: var(--surface); overflow: hidden; }
+  .visit__pic { position: absolute; left: var(--margin); top: 50%; width: min(52vw, 820px); translate: 0 -50%; rotate: 6deg; pointer-events: none; }
+  .visit__card {
+    position: absolute; top: 60px; right: max(var(--margin), env(safe-area-inset-right, 0px)); width: 400px; background: var(--paper); color: var(--ink);
+    padding: 32px 32px 0; border-radius: 8px; display: grid; gap: 20px; overflow: hidden;
+  }
+  .visit__card h2 { font-size: var(--s-head); }
+  .visit__card address { font-style: normal; }
+  .visit__card dl { display: grid; gap: 6px; }
+  .visit__card dl div { display: flex; justify-content: space-between; gap: 16px; }
+  .visit__card dt { font-weight: 600; }
+  .visit__card .btn { margin: 4px -32px 0; min-height: 56px; border-radius: 0; }
+  @media (max-width: 700px) {
+    .visit { min-height: 0; padding-bottom: 24px; }
+    .visit__pic { position: relative; left: auto; top: auto; translate: none; width: 96vw; margin: 0 0 0 -4vw; }
+    .visit__card { position: relative; top: auto; right: auto; width: auto; margin: -80px 16px 0; }
+  }
+
+  /* Footer: the back of the label, uncovered as the page lifts */
+  .back { background: var(--kraft); color: var(--ink); padding-block: 72px 32px; }
+  .back__panel { grid-column: 2 / 12; position: relative; }
+  .back__panel .scallop { height: 24px; }
+  .back__in { background: var(--paper); padding: 40px clamp(24px, 4vw, 56px) 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; min-height: 380px; }
+  .back__msg h2 { font-size: var(--s-head); margin-bottom: 20px; }
+  .back__msg p { max-width: 34ch; }
+  .back__to { position: relative; display: grid; gap: 12px; align-content: end; font-size: var(--s-lead); line-height: 1.3; padding-top: 140px; }
+  .stamp { position: absolute; top: 0; right: 0; width: 96px; padding: 6px; background: var(--paper); outline: 4px dotted var(--kraft); outline-offset: -2px; rotate: 4deg; }
+  .stamp img { aspect-ratio: 3 / 4; object-fit: cover; width: 100%; height: auto; }
+  .imprint { grid-column: 1 / -1; text-align: center; font-size: var(--s-small); }
+  @media (max-width: 899px) {
+    .back__panel { grid-column: 1 / -1; }
+    .back__in { grid-template-columns: 1fr; }
+    .back__to { padding-top: 0; }
+    .stamp { top: -230px; width: 72px; }
+  }
+  @media (max-width: 700px) { .stamp { position: static; justify-self: end; order: -1; } .back__to { display: grid; } }
+
+  /* Motion */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .label { animation: label-in 1100ms var(--ease-expo) both 80ms; }
+    .js .label h1 .line > span { transform: translateY(105%); animation: rise 1000ms var(--ease-expo) forwards; animation-delay: calc(380ms + var(--l) * 110ms); }
+    .js .label__code .bars { clip-path: inset(0 100% 0 0); animation: wipe 900ms var(--ease-in-out) forwards 900ms; }
+    .js .hero__box img { animation: land 1400ms var(--ease-expo) both 300ms; }
+    .js .top { animation: fade 700ms ease both 600ms; }
+    .js [data-in] { opacity: 0; transform: translateY(24px); transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-expo); transition-delay: calc(var(--d, 0) * 80ms); }
+    .js [data-in].is-in { opacity: 1; transform: none; }
+    .js .plate img { transform: scale(1.08) translateY(16px); opacity: 0; transition: transform 1400ms var(--ease-soft), opacity 900ms ease; }
+    .js .plate.is-in img { transform: none; opacity: 1; }
+    .js .back__panel { opacity: 0; transform: translateY(64px); transition: opacity 600ms ease, transform 1000ms var(--ease-expo); }
+    .js .back__panel.is-in { opacity: 1; transform: none; }
+    .js .slip .row { opacity: 0; transform: translateY(10px); transition: opacity 500ms ease, transform 600ms var(--ease-out); transition-delay: calc(200ms + var(--r) * 60ms); }
+    .js .slip.is-in .row { opacity: 1; transform: none; }
+  }
+  @keyframes label-in { from { opacity: 0; transform: translateY(56px); } }
+  @keyframes rise { to { transform: translateY(0); } }
+  @keyframes wipe { to { clip-path: inset(0 0 0 0); } }
+  @keyframes land { from { opacity: 0; transform: translateY(40px) rotate(-6deg); } }
+  @keyframes fade { from { opacity: 0; } }
+</style>
+</head>
+<body>
+<main id="top">
+  <section class="hero wrap" aria-label="Introduction">
+    <header class="top wrap">
+      <a class="mono" href="#top" aria-label="Aaditya Holani, back to top">AH</a>
+      <nav aria-label="Sections"><a href="#work">Work</a><a href="#hire">Hire me for</a><a href="#contact">Contact</a></nav>
+      <a class="btn" href="mailto:aaditya.holani@gmail.com?subject=Hello%20Aaditya">Email me</a>
+    </header>
+
+    <div class="hero__box" id="hero-box" aria-hidden="true"><img src="img/box.webp" alt="" width="596" height="596"></div>
+
+    <article class="label" aria-labelledby="name">
+      <h1 class="d" id="name"><span class="line"><span style="--l:0">Aaditya</span></span><span class="line"><span style="--l:1">Holani</span></span></h1>
+      <p class="lead">Supply chain consultant at OMP. I plan how stock moves, and I measure the work in days and dollars.</p>
+      <div class="label__route">
+        <p><b>Ship from</b><span>Nagpur, India</span></p>
+        <p><b>Ship to</b><span>Atlanta, Georgia</span></p>
+      </div>
+      <p class="label__svc"><span>Open to supply chain and S&amp;OP roles</span><span class="d">Priority</span></p>
+      <dl class="label__meta">
+        <div><dt>Via</dt><dd>College Station, Texas</dd></div>
+        <div><dt>Now with</dt><dd>OMP, since Sep 2024</dd></div>
+        <div><dt>Contents</dt><dd>S&amp;OP, inventory, analytics</dd></div>
+      </dl>
+      <div class="label__code">
+        <svg class="bars" viewBox="0 0 145 40" preserveAspectRatio="none" aria-hidden="true"><rect x="0" width="2" height="40"/><rect x="3" width="1" height="40"/><rect x="6" width="1" height="40"/><rect x="11" width="1" height="40"/><rect x="13" width="1" height="40"/><rect x="17" width="2" height="40"/><rect x="22" width="2" height="40"/><rect x="27" width="1" height="40"/><rect x="29" width="1" height="40"/><rect x="33" width="1" height="40"/><rect x="36" width="2" height="40"/><rect x="39" width="3" height="40"/><rect x="44" width="1" height="40"/><rect x="46" width="1" height="40"/><rect x="50" width="2" height="40"/><rect x="55" width="2" height="40"/><rect x="58" width="3" height="40"/><rect x="64" width="1" height="40"/><rect x="66" width="1" height="40"/><rect x="70" width="2" height="40"/><rect x="73" width="3" height="40"/><rect x="77" width="1" height="40"/><rect x="80" width="2" height="40"/><rect x="83" width="3" height="40"/><rect x="88" width="1" height="40"/><rect x="90" width="3" height="40"/><rect x="94" width="4" height="40"/><rect x="99" width="2" height="40"/><rect x="103" width="1" height="40"/><rect x="106" width="3" height="40"/><rect x="110" width="3" height="40"/><rect x="114" width="1" height="40"/><rect x="117" width="2" height="40"/><rect x="121" width="2" height="40"/><rect x="124" width="3" height="40"/><rect x="130" width="1" height="40"/><rect x="132" width="2" height="40"/><rect x="137" width="3" height="40"/><rect x="141" width="1" height="40"/><rect x="143" width="2" height="40"/></svg>
+        <span>AH-ATL-2024</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="work wrap" id="work" aria-labelledby="work-h">
+    <h2 class="d sec-h" id="work-h" data-in>Work so far</h2>
+    <div class="folders">
+      <article class="folder" style="--i:0" aria-labelledby="omp-h">
+        <div class="folder__strip wrap"><div class="tab"><h3 id="omp-h">OMP</h3></div><p class="folder__cat">Supply chain consultant, Sep 2024 to now</p></div>
+        <div class="folder__body grid wrap">
+          <figure class="plate" data-in><img src="img/bags.webp" alt="Three plain kraft pet food bags stacked" width="648" height="648" loading="lazy"></figure>
+          <div class="folder__copy">
+            <p data-in style="--d:1">I deliver sales and operations planning for Mars Petcare, from requirements to go-live. I turned stakeholder asks into more than 45 user stories, ranked them, and shipped the 15 that mattered most first.</p>
+            <p class="fig" data-in style="--d:2"><b data-count="25" data-suffix="%">25%</b><span>higher user adoption after the 15 high-impact features went live.</span></p>
+            <ul class="more" data-in style="--d:3">
+              <li><b>20%</b><span>faster time to market</span></li>
+              <li><b>45+</b><span>user stories from stakeholder requirements</span></li>
+              <li><b>30%</b><span>faster onboarding across 8 client sessions</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="folder" style="--i:1" aria-labelledby="fl-h">
+        <div class="folder__strip wrap"><div class="tab"><h3 id="fl-h">Formlabs</h3></div><p class="folder__cat">Supply chain program manager, May 2023 to Apr 2024</p></div>
+        <div class="folder__body grid wrap">
+          <figure class="plate" data-in><img src="img/printer.webp" alt="A resin 3D printer with an orange cover" width="636" height="636" loading="lazy"></figure>
+          <div class="folder__copy">
+            <p data-in style="--d:1">I ran the replacement parts program end to end: quoting parts across more than one vendor, landing 13 critical service parts on time, and tracking how the program performed in Looker Studio.</p>
+            <p class="fig" data-in style="--d:2"><b data-count="99" data-suffix="%">99%</b><span>fill rate on replacement parts, with $240k of excess stock avoided.</span></p>
+            <ul class="more" data-in style="--d:3">
+              <li><b>$300k</b><span>saved bringing 13 service parts in on time</span></li>
+              <li><b>$200k</b><span>in cost-downs from multi-vendor quotes</span></li>
+              <li><b>18%</b><span>more effective program, measured in Looker Studio</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="folder" style="--i:2" aria-labelledby="dl-h">
+        <div class="folder__strip wrap"><div class="tab"><h3 id="dl-h">Deloitte</h3></div><p class="folder__cat">Product analyst, Jul 2021 to Jul 2022</p></div>
+        <div class="folder__body grid wrap">
+          <figure class="plate" data-in><img src="img/pen.webp" alt="A fountain pen resting on a contract page" width="890" height="890" loading="lazy"></figure>
+          <div class="folder__copy">
+            <p data-in style="--d:1">I rolled out Salesforce CPQ and DocuSign CLM for clients, putting quoting and contract signing into one flow. A contract that took 40 days to close took 5.</p>
+            <p class="fig" data-in style="--d:2"><b data-count="2.5" data-prefix="$" data-suffix="M" data-dec="1">$2.5M</b><span>saved a year by cutting contract cycle time from 40 days to 5.</span></p>
+            <ul class="more" data-in style="--d:3">
+              <li><b>30%</b><span>fewer costly order errors</span></li>
+              <li><b>25%</b><span>more cross-selling through product bundles</span></li>
+              <li><b>15%</b><span>of man-hours saved across QA and UAT</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="folder" style="--i:3" aria-labelledby="sc-h">
+        <div class="folder__strip wrap"><div class="tab"><h3 id="sc-h">Schindler</h3></div><p class="folder__cat">Data analyst intern, Jun to Jul 2020</p></div>
+        <div class="folder__body grid wrap">
+          <figure class="plate" data-in><img src="img/buttons.webp" alt="A steel elevator call button panel" width="598" height="598" loading="lazy"></figure>
+          <div class="folder__copy">
+            <p data-in style="--d:1">I read elevator service data for the early signs that a customer was about to cancel their maintenance contract, and mapped service across three regions in dashboards.</p>
+            <p class="fig" data-in style="--d:2"><b data-count="50" data-prefix="$" data-suffix="k">$50k</b><span>in revenue in one month from the renewal analysis.</span></p>
+            <ul class="more" data-in style="--d:3">
+              <li><b>25%</b><span>more contract renewals</span></li>
+              <li><b>15%</b><span>less lead attrition</span></li>
+              <li><b>3</b><span>regions mapped in service dashboards</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="total grid wrap" id="results" aria-labelledby="total-h">
+    <div class="total__left">
+      <div>
+        <h2 class="d sec-h" id="total-h" data-in>Money moved</h2>
+        <p class="note" data-in style="--d:1">Every dollar figure from the folders above, added up. One is a yearly saving; the rest happened once.</p>
+      </div>
+      <p class="total__sum" data-in style="--d:2"><b data-count="3.29" data-prefix="$" data-suffix="M" data-dec="2">$3.29M</b><span>in savings and revenue across four companies, 2020 to 2024.</span></p>
+    </div>
+    <div class="slip" data-slip>
+      <h3>Packing slip</h3>
+      <h4>Deloitte</h4>
+      <p class="row" style="--r:0"><span>Contract cycle, 40 days to 5 (a year)</span><span class="leader"></span><span class="v">$2,500,000</span></p>
+      <h4>Formlabs</h4>
+      <p class="row" style="--r:1"><span>13 service parts in on time</span><span class="leader"></span><span class="v">$300,000</span></p>
+      <p class="row" style="--r:2"><span>Excess stock avoided</span><span class="leader"></span><span class="v">$240,000</span></p>
+      <p class="row" style="--r:3"><span>Multi-vendor cost-downs</span><span class="leader"></span><span class="v">$200,000</span></p>
+      <h4>Schindler</h4>
+      <p class="row" style="--r:4"><span>Renewal revenue, one month</span><span class="leader"></span><span class="v">$50,000</span></p>
+      <p class="row row--total" style="--r:5"><span>Total</span><span class="leader"></span><span class="v">$3,290,000</span></p>
+    </div>
+  </section>
+
+  <section class="bol-sec wrap" id="hire" aria-labelledby="bol-h">
+    <div class="bol" data-in>
+      <div class="bol__head">
+        <h2 class="d sec-h" id="bol-h">Hire me for</h2>
+        <p>The roles I'm after, what I'd take off your plate in each, and the work that shows I can.</p>
+      </div>
+      <table>
+        <thead><tr><th scope="col">Role</th><th scope="col">What I'd own</th><th scope="col">Proof on file</th></tr></thead>
+        <tbody>
+          <tr><td><b>S&amp;OP and planning</b></td><td>Turning what planners and leaders need into a plan the system can run, then getting people to use it.</td><td>25% higher adoption of S&amp;OP at OMP for Mars Petcare</td></tr>
+          <tr><td><b>Inventory and service parts</b></td><td>Setting stock so the shelf stays full without cash piling up on it, with more than one vendor in play.</td><td>99% fill rate and $240k of excess avoided at Formlabs</td></tr>
+          <tr><td><b>Order-to-contract systems</b></td><td>Rolling out quoting and contract tools so orders stop waiting on paperwork.</td><td>Contract cycle cut from 40 days to 5, $2.5M a year, at Deloitte</td></tr>
+          <tr><td><b>Supply chain analytics</b></td><td>Finding the signal in operational data with Python, SQL and BigQuery, and putting it in front of the people who act on it.</td><td>$50k of renewal revenue in a month at Schindler</td></tr>
+        </tbody>
+      </table>
+      <div class="bol__foot">
+        <p>Open to supply chain, S&amp;OP and inventory roles. Based in Atlanta.</p>
+        <a class="btn" href="mailto:aaditya.holani@gmail.com?subject=A%20role%20for%20you">Talk about a role</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ticket-sec wrap" id="service" aria-labelledby="svc-h">
+    <div class="ticket" data-in>
+      <div class="ticket__main">
+        <h2 class="d sec-h" id="svc-h">What 99% costs</h2>
+        <p>Every point of service level is paid for in safety stock. Pick a target and see what it ties up for one example part: 120 sold a day, give or take 35, on a 9-day lead time, at $42 each.</p>
+        <div class="ctl">
+          <label for="sl">Service level target <output id="sl-out" for="sl">95%</output></label>
+          <input id="sl" type="range" min="80" max="99.9" step="0.1" value="95" aria-describedby="sl-note">
+          <div class="presets" role="group" aria-label="Common targets">
+            <button class="chip" type="button" data-v="90" aria-pressed="false">90%</button>
+            <button class="chip" type="button" data-v="95" aria-pressed="true">95%</button>
+            <button class="chip" type="button" data-v="99" aria-pressed="false">99%, Formlabs</button>
+            <button class="chip" type="button" data-v="99.9" aria-pressed="false">99.9%</button>
+          </div>
+        </div>
+        <p class="fine" id="sl-note">Cycle service level with normally distributed demand: safety stock = z × 35 × √9. An example part, not client data.</p>
+      </div>
+      <div class="ticket__stub">
+        <p class="out"><b><span id="o-units">173</span><small>units</small></b><span>of safety stock</span></p>
+        <p class="out"><b id="o-cash">$7,254</b><span>of cash on the shelf</span></p>
+        <p class="out"><b id="o-hold">$1,813</b><span>a year to hold it, at 25%</span></p>
+        <p id="o-delta" aria-live="polite">From 95% to 99% adds 72 units and $3,000 of stock.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="letter-sec wrap" aria-labelledby="letter-h">
+    <div class="letter" data-in>
+      <div class="sheet">
+        <div class="who"><span class="seal" aria-hidden="true">AH</span><span>Atlanta, Georgia</span></div>
+        <h2 id="letter-h">Dear hiring team,</h2>
+        <p>I started in Nagpur, the city with India's Zero Mile stone at its centre, studying mechanical engineering at VNIT. Somewhere along the way I ended up planning how things move.</p>
+        <p>At Schindler I read service data to find which contracts were about to cancel. At Deloitte I helped take a contract from 40 days to sign down to 5.</p>
+        <p>Then a master's in industrial engineering at Texas A&amp;M, finished with a 4.0, and a year at Formlabs keeping replacement parts on the shelf 99% of the time.</p>
+        <p>Now I'm at OMP in Atlanta, putting sales and operations planning live for Mars Petcare. I'm looking for my next supply chain or S&amp;OP role, where the plan has to hold up in the warehouse.</p>
+        <p class="sign">Aaditya Holani</p>
+        <span>Supply chain consultant, OMP</span>
+      </div>
+      <svg class="scallop scallop--down" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 24 A50 24 0 0 1 100 24 A50 24 0 0 1 200 24 A50 24 0 0 1 300 24 A50 24 0 0 1 400 24 A50 24 0 0 1 500 24 A50 24 0 0 1 600 24 A50 24 0 0 1 700 24 A50 24 0 0 1 800 24 A50 24 0 0 1 900 24 A50 24 0 0 1 1000 24 A50 24 0 0 1 1100 24 A50 24 0 0 1 1200 24 V40 H0 Z"/></svg>
+      <div class="strip">
+        <div class="strip__in">
+          <span class="email" id="email">aaditya.holani@gmail.com</span>
+          <button class="btn btn--ink" id="copy" type="button"><span class="morph"><span id="copy-a">Copy email</span><span id="copy-b" aria-hidden="true">Copied</span></span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="deck-sec wrap" id="education" aria-labelledby="deck-h">
+    <h2 class="d sec-h" id="deck-h" data-in>Schooling and kit</h2>
+    <div class="deck-wrap">
+      <div class="deck-stage">
+        <div class="deck" id="deck">
+          <article class="card"><span class="spine" aria-hidden="true">Texas A&amp;M</span><h3>MS Industrial Engineering</h3><p>Texas A&amp;M University, College Station. A 4.0 GPA and the Academic Excellence Medal; project on predicting mask-wearing during COVID-19 with lasso regression.</p><footer><span>Aug 2024</span><span>Texas</span></footer></article>
+          <article class="card"><span class="spine" aria-hidden="true">VNIT Nagpur</span><h3>BTech Mechanical Engineering</h3><p>Visvesvaraya National Institute of Technology, Nagpur. Graduated with a GPA of 8.31 out of 10.</p><footer><span>May 2021</span><span>Nagpur</span></footer></article>
+          <article class="card"><span class="spine" aria-hidden="true">Data</span><h3>Data analysis</h3><p>Python with pandas, NumPy and scikit-learn; SQL, R, Minitab and advanced Excel.</p><footer><span>Daily</span><span>Toolkit</span></footer></article>
+          <article class="card"><span class="spine" aria-hidden="true">Platforms</span><h3>Planning platforms</h3><p>OMP, NetSuite, BigQuery, Salesforce, Netstock, Coupa and SAP.</p><footer><span>Daily</span><span>Toolkit</span></footer></article>
+          <article class="card"><span class="spine" aria-hidden="true">Projects</span><h3>Product and projects</h3><p>Asana and Jira, run in Agile and Scrum teams, from requirements to user stories to go-live.</p><footer><span>Weekly</span><span>Toolkit</span></footer></article>
+          <article class="card"><span class="spine" aria-hidden="true">Strengths</span><h3>Strengths</h3><p>Optimization, business analysis, supply chain management and leading across teams.</p><footer><span>Always</span><span>Toolkit</span></footer></article>
+        </div>
+        <p class="deck-foot" data-in>Two degrees and four sets of tools: engineering first, then the systems that keep stock honest.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="contact" aria-labelledby="ct-h">
+    <div class="visit__pic" id="visit-pic" aria-hidden="true"><img src="img/box.webp" alt="" width="596" height="596" loading="lazy"></div>
+    <div class="visit__card" data-in>
+      <h2 class="d" id="ct-h">Get in touch</h2>
+      <address>Atlanta, Georgia<br>United States, Eastern time</address>
+      <dl>
+        <div><dt>Looking for</dt><dd>Supply chain, S&amp;OP</dd></div>
+        <div><dt>LinkedIn</dt><dd><a class="link" href="https://www.linkedin.com/in/aadityaholani">aadityaholani</a></dd></div>
+        <div><dt>GitHub</dt><dd><a class="link" href="https://github.com/AadityaHolani">AadityaHolani</a></dd></div>
+      </dl>
+      <a class="btn" href="mailto:aaditya.holani@gmail.com?subject=Hello%20Aaditya">Email me</a>
+    </div>
+  </section>
+</main>
+
+<footer class="back grid wrap" aria-labelledby="back-h">
+  <div class="back__panel">
+    <svg class="scallop" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 24 A50 24 0 0 1 100 24 A50 24 0 0 1 200 24 A50 24 0 0 1 300 24 A50 24 0 0 1 400 24 A50 24 0 0 1 500 24 A50 24 0 0 1 600 24 A50 24 0 0 1 700 24 A50 24 0 0 1 800 24 A50 24 0 0 1 900 24 A50 24 0 0 1 1000 24 A50 24 0 0 1 1100 24 A50 24 0 0 1 1200 24 V40 H0 Z"/></svg>
+    <div class="back__in">
+      <div class="back__msg">
+        <h2 class="d" id="back-h">Thanks for reading</h2>
+        <p>If you have stock that should be somewhere else, or a plan that has to hold, write to me.</p>
+      </div>
+      <div class="back__to">
+        <figure class="stamp"><img src="img/medal.jpg" alt="A gold medal and a graduation cap" width="1024" height="1024" loading="lazy"></figure>
+        <a class="link" href="mailto:aaditya.holani@gmail.com">aaditya.holani@gmail.com</a>
+        <a class="link" href="https://www.linkedin.com/in/aadityaholani">LinkedIn</a>
+        <a class="link" href="https://github.com/AadityaHolani">GitHub</a>
+        <span>Atlanta, Georgia</span>
+      </div>
+      <p class="imprint">© 2026 Aaditya Holani. Photographs are illustrative, made with Figma AI.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+
+  // Reveals and rolling figures, once
+  const fmt = (el, v) => (el.dataset.prefix || '') + v.toFixed(+(el.dataset.dec || 0)) + (el.dataset.suffix || '');
+  function roll(el) {
+    if (reduce.matches) return;
+    const to = parseFloat(el.dataset.count), start = performance.now(), dur = 1400;
+    const step = (now) => { const t = Math.min(1, (now - start) / dur); el.textContent = fmt(el, to * (1 - Math.pow(1 - t, 4))); if (t < 1) requestAnimationFrame(step); };
+    el.textContent = fmt(el, 0); requestAnimationFrame(step);
+  }
+  const targets = document.querySelectorAll('[data-in], .plate, [data-slip], .back__panel');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => {
+      for (const e of es) if (e.isIntersecting) {
+        e.target.classList.add('is-in');
+        e.target.querySelectorAll('[data-count]').forEach(roll);
+        io.unobserve(e.target);
+      }
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    targets.forEach((el) => io.observe(el));
+  } else targets.forEach((el) => el.classList.add('is-in'));
+
+  // What a service level costs: safety stock = z(p) × σ × √L
+  const inv = (p) => { // Acklam's inverse normal CDF
+    const a = [-39.6968302866538, 220.946098424521, -275.928510446969, 138.357751867269, -30.6647980661472, 2.50662827745924];
+    const b = [-54.4760987982241, 161.585836858041, -155.698979859887, 66.8013118877197, -13.2806815528857];
+    const c = [-0.00778489400243029, -0.322396458041136, -2.40075827716184, -2.54973253934373, 4.37466414146497, 2.93816398269878];
+    const d = [0.00778469570904146, 0.32246712907004, 2.445134137143, 3.75440866190742];
+    const lo = 0.02425, hi = 1 - lo;
+    if (p < lo) { const q = Math.sqrt(-2 * Math.log(p)); return (((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5]) / ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1); }
+    if (p > hi) { const q = Math.sqrt(-2 * Math.log(1 - p)); return -(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5]) / ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1); }
+    const q = p - 0.5, r = q * q;
+    return (((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q / (((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1);
+  };
+  const SIGMA = 35 * Math.sqrt(9), COST = 42, HOLD = 0.25;
+  const ss = (pct) => inv(pct / 100) * SIGMA;
+  const usd = (n) => '$' + Math.round(n).toLocaleString('en-US');
+  const sl = document.getElementById('sl'), chips = [...document.querySelectorAll('.chip')];
+  function price() {
+    const p = +sl.value, units = ss(p);
+    document.getElementById('sl-out').textContent = (p % 1 ? p.toFixed(1) : p) + '%';
+    document.getElementById('o-units').textContent = Math.round(units).toLocaleString('en-US');
+    document.getElementById('o-cash').textContent = usd(units * COST);
+    document.getElementById('o-hold').textContent = usd(units * COST * HOLD);
+    const ref = p < 99 ? 99 : 95, du = ss(Math.max(p, ref)) - ss(Math.min(p, ref));
+    document.getElementById('o-delta').textContent = p === 99 ? 'Formlabs ran its replacement parts at a 99% fill rate.'
+      : `From ${Math.min(p, ref)}% to ${Math.max(p, ref)}% adds ${Math.round(du)} units and ${usd(du * COST)} of stock.`;
+    chips.forEach((c) => c.setAttribute('aria-pressed', String(+c.dataset.v === p)));
+  }
+  sl.addEventListener('input', price);
+  chips.forEach((c) => c.addEventListener('click', () => { sl.value = c.dataset.v; price(); }));
+  price();
+
+  // Schooling and kit: cards that fold into spines while the stage is pinned
+  const sec = document.getElementById('education'), deck = document.getElementById('deck'), cards = [...deck.children];
+  const wide = matchMedia('(min-width: 1100px) and (min-height: 720px)');
+  let active = -1;
+  function lay() {
+    const pinned = wide.matches && !reduce.matches;
+    document.documentElement.classList.toggle('pin', pinned);
+    if (!pinned) { cards.forEach((c) => { c.style.transform = ''; c.classList.remove('is-spine', 'is-next'); c.removeAttribute('tabindex'); c.removeAttribute('role'); c.removeAttribute('aria-label'); }); active = -1; return; }
+    const r = sec.querySelector('.deck-wrap').getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight)));
+    const k = Math.min(cards.length - 1, Math.floor(p * cards.length));
+    if (k === active) return; active = k;
+    const W = deck.clientWidth, spine = Math.min(120, (W - 620) / (cards.length - 1));
+    deck.style.setProperty('--spine', spine + 'px');
+    cards.forEach((c, i) => {
+      c.style.transform = `translateX(${i <= k ? i * spine : W + 40}px)`;
+      c.classList.toggle('is-spine', i < k);
+      c.classList.toggle('is-next', i > k);
+      if (i < k) { c.setAttribute('tabindex', '0'); c.setAttribute('role', 'button'); c.setAttribute('aria-label', 'Show ' + c.querySelector('h3').textContent); }
+      else { c.removeAttribute('tabindex'); c.removeAttribute('role'); c.removeAttribute('aria-label'); }
+    });
+  }
+  cards.forEach((c, i) => {
+    const go = () => {
+      if (!c.classList.contains('is-spine')) return;
+      const wrap = sec.querySelector('.deck-wrap'), top = wrap.getBoundingClientRect().top + scrollY;
+      scrollTo({ top: top + (wrap.offsetHeight - innerHeight) * ((i + 0.5) / cards.length), behavior: reduce.matches ? 'auto' : 'smooth' });
+    };
+    c.addEventListener('click', go);
+    c.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+  });
+
+  // The box drifts with the scroll
+  const box = document.getElementById('hero-box'), vpic = document.getElementById('visit-pic');
+  function drift() {
+    if (reduce.matches) return;
+    if (scrollY < innerHeight * 1.5) box.style.transform = `translate3d(0, ${(scrollY * 0.18).toFixed(1)}px, 0) rotate(${(scrollY * 0.01).toFixed(2)}deg)`;
+    const r = vpic.getBoundingClientRect();
+    if (r.top < innerHeight && r.bottom > 0) vpic.style.transform = `translate3d(0, ${((r.top - innerHeight / 2) * -0.08).toFixed(1)}px, 0)`;
+  }
+
+  let ticking = false;
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; lay(); drift(); }); } };
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', () => { active = -1; onScroll(); });
+  wide.addEventListener?.('change', () => { active = -1; lay(); });
+  lay(); drift();
+
+  // Copy email
+  const copy = document.getElementById('copy'), ca = document.getElementById('copy-a'), cb = document.getElementById('copy-b'), email = document.getElementById('email');
+  let t;
+  const show = (on) => { ca.setAttribute('aria-hidden', String(on)); cb.setAttribute('aria-hidden', String(!on)); };
+  const select = () => { const r = document.createRange(); r.selectNodeContents(email); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  copy.addEventListener('click', () => {
+    try { navigator.clipboard.writeText(email.textContent.trim()).then(() => { show(true); clearTimeout(t); t = setTimeout(() => show(false), 1600); }, select); }
+    catch (_) { select(); }
+  });
+</script>
+</body>
+</html>
