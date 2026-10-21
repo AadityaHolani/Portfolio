@@ -21,6 +21,9 @@
 <meta name="theme-color" content="#1a2039">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3f1ec'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Impact,Arial Narrow,sans-serif' font-size='34' fill='%2312131a'%3EAH%3C/text%3E%3C/svg%3E">
 <title>Aaditya Holani, Supply Chain</title>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Aaditya Holani","url":"https://aadityaholani.com/","jobTitle":"Supply Chain Consultant","worksFor":{"@type":"Organization","name":"OMP"},"address":{"@type":"PostalAddress","addressLocality":"Atlanta","addressRegion":"GA","addressCountry":"US"},"email":"mailto:aaditya.holani@gmail.com","alumniOf":[{"@type":"CollegeOrUniversity","name":"Texas A&M University"},{"@type":"CollegeOrUniversity","name":"Visvesvaraya National Institute of Technology"}],"knowsAbout":["Sales and operations planning","Inventory planning","Service parts","Supply chain analytics","CPQ","Python","SQL"],"sameAs":["https://www.linkedin.com/in/aadityaholani","https://github.com/AadityaHolani"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,400;0,600;1,400&display=swap">
@@ -192,6 +195,27 @@
     .slip { margin-top: 48px; }
   }
 
+  /* Hire me for: the bill of lading */
+  .bol-sec { padding-top: var(--gap); }
+  .bol { background: var(--paper); color: var(--ink); border-radius: var(--radius); padding: clamp(24px, 4vw, 56px); display: grid; gap: 32px; }
+  .bol__head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+  .bol__head p { max-width: 46ch; }
+  .bol table { width: 100%; border-collapse: collapse; font-size: var(--s-body); }
+  .bol th { text-align: left; font-size: var(--s-small); font-weight: 600; padding: 0 16px 12px 0; border-bottom: 6px solid var(--ink); }
+  .bol td { padding: 20px 16px 20px 0; vertical-align: top; border-bottom: 2px solid color-mix(in srgb, var(--ink) 15%, transparent); }
+  .bol td:first-child { width: 26%; }
+  .bol td:first-child b { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: var(--s-lead); line-height: 1.05; display: block; }
+  .bol td:last-child { width: 30%; font-weight: 600; }
+  .bol tr:last-child td { border-bottom: 0; }
+  .bol__foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; background: var(--ink); color: var(--paper); margin: 0 calc(-1 * clamp(24px, 4vw, 56px)) calc(-1 * clamp(24px, 4vw, 56px)); padding: 20px clamp(24px, 4vw, 56px); border-radius: 0 0 var(--radius) var(--radius); }
+  .bol__foot p { font-weight: 600; }
+  @media (max-width: 760px) {
+    .bol thead { display: none; }
+    .bol tr { display: grid; gap: 6px; padding-block: 20px; border-bottom: 2px solid color-mix(in srgb, var(--ink) 15%, transparent); }
+    .bol td { padding: 0; border: 0; width: auto !important; }
+    .bol tr:last-child { border-bottom: 0; }
+  }
+
   /* The live thing: a pick ticket that prices a service level */
   .ticket-sec { padding-top: var(--gap); }
   .ticket { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); background: var(--kraft-2); color: var(--ink); border-radius: var(--radius); overflow: hidden; }
@@ -335,7 +359,7 @@
   <section class="hero wrap" aria-label="Introduction">
     <header class="top wrap">
       <a class="mono" href="#top" aria-label="Aaditya Holani, back to top">AH</a>
-      <nav aria-label="Sections"><a href="#work">Work</a><a href="#results">Results</a><a href="#contact">Contact</a></nav>
+      <nav aria-label="Sections"><a href="#work">Work</a><a href="#hire">Hire me for</a><a href="#contact">Contact</a></nav>
       <a class="btn" href="mailto:aaditya.holani@gmail.com?subject=Hello%20Aaditya">Email me</a>
     </header>
 
@@ -449,6 +473,28 @@
       <h4>Schindler</h4>
       <p class="row" style="--r:4"><span>Renewal revenue, one month</span><span class="leader"></span><span class="v">$50,000</span></p>
       <p class="row row--total" style="--r:5"><span>Total</span><span class="leader"></span><span class="v">$3,290,000</span></p>
+    </div>
+  </section>
+
+  <section class="bol-sec wrap" id="hire" aria-labelledby="bol-h">
+    <div class="bol" data-in>
+      <div class="bol__head">
+        <h2 class="d sec-h" id="bol-h">Hire me for</h2>
+        <p>The roles I'm after, what I'd take off your plate in each, and the work that shows I can.</p>
+      </div>
+      <table>
+        <thead><tr><th scope="col">Role</th><th scope="col">What I'd own</th><th scope="col">Proof on file</th></tr></thead>
+        <tbody>
+          <tr><td><b>S&amp;OP and planning</b></td><td>Turning what planners and leaders need into a plan the system can run, then getting people to use it.</td><td>25% higher adoption of S&amp;OP at OMP for Mars Petcare</td></tr>
+          <tr><td><b>Inventory and service parts</b></td><td>Setting stock so the shelf stays full without cash piling up on it, with more than one vendor in play.</td><td>99% fill rate and $240k of excess avoided at Formlabs</td></tr>
+          <tr><td><b>Order-to-contract systems</b></td><td>Rolling out quoting and contract tools so orders stop waiting on paperwork.</td><td>Contract cycle cut from 40 days to 5, $2.5M a year, at Deloitte</td></tr>
+          <tr><td><b>Supply chain analytics</b></td><td>Finding the signal in operational data with Python, SQL and BigQuery, and putting it in front of the people who act on it.</td><td>$50k of renewal revenue in a month at Schindler</td></tr>
+        </tbody>
+      </table>
+      <div class="bol__foot">
+        <p>Open to supply chain, S&amp;OP and inventory roles. Based in Atlanta.</p>
+        <a class="btn" href="mailto:aaditya.holani@gmail.com?subject=A%20role%20for%20you">Talk about a role</a>
+      </div>
     </div>
   </section>
 
